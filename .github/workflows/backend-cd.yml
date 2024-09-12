@@ -156,6 +156,11 @@ jobs:
           echo "Completed deployment"
           kubectl get pods
           echo "Completed"
+      
+      - name: Get External IP of Backend Service
+        run: |
+          EXTERNAL_IP=$(kubectl get svc backend -o jsonpath='{.status.loadBalancer.ingress[0].hostname}')
+          echo "External IP: $EXTERNAL_IP"
   # deploy:
   #   name: Deploy Docker image
   #   needs: [ build ]
