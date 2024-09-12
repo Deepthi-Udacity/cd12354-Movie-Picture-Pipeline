@@ -90,6 +90,9 @@ jobs:
       - name: Log in to AWS ECR
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v1
+        with:
+          registry: ${{ secrets.AWS_ECR_REGISTRY }}
+          repository: ${{ secrets.AWS_ECR_BE_REPO_NAME }}
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -97,23 +100,16 @@ jobs:
 
       - name: Set environment variable
         run: |
-          echo IMAGE_URL=${{ steps.login-ecr.outputs.registry }}/${{ vars.AWS_ECR_BE_REPO_NAME }}:${{ github.sha }} >> $GITHUB_ENV
+          echo IMAGE_URL=${{ steps.login-ecr.outputs.registry }}/${{ secrets.AWS_ECR_BE_REPO_NAME }}:${{ github.sha }} >> $GITHUB_ENV
 
       - name: Build Docker image
-        env:
-          ECR_REGISTRY: ${{ vars.AWS_ECR_REGISTRY }}
-          ECR_REPOSITORY: ${{ vars.AWS_ECR_BE_REPO_NAME }}
-          IMAGE_TAG: ${{ github.sha }}
         run: |
           cd starter/backend
           echo "IMAGE URL : ${IMAGE_URL}"
-          docker build -t ${IMAGE_URL} .
+          docker build -t ${{ env.IMAGE_URL }} .
           echo "List Docker images"
           docker images
-          echo "ECR_REGISTRY= $ECR_REGISTRY"
-          echo "ECR_REPOSITORY= $ECR_REPOSITORY"
-          echo "IMAGE URI =$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
-          docker push ${IMAGE_URL}
+          docker push ${{ env.IMAGE_URL }}
           echo "Image pushed"
   deploy:
     name: Deploy docker image
@@ -133,37 +129,20 @@ jobs:
           AWS_REGION: us-east-1
         with: 
           aws-region: us-east-1
-
-      - name: Log in to AWS ECR
-        uses: aws-actions/amazon-ecr-login@v1
-        env:
-          ECR_REGISTRY: ${{ vars.AWS_ECR_REGISTRY }}
-          ECR_REPOSITORY: ${{ vars.AWS_ECR_BE_REPO_NAME }}
-          IMAGE_TAG: ${{ github.sha }}
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: us-east-1
           
       - name: Update kubeconfig
         run: aws eks update-kubeconfig --name my-eks-cluster
 
       - name: Set Docker image in Kustomize
-        env:
-          ECR_REGISTRY: ${{ vars.AWS_ECR_REGISTRY }}
-          ECR_REPOSITORY: ${{ vars.AWS_ECR_BE_REPO_NAME }}
-          IMAGE_TAG: ${{ github.sha }}
         run: |
           cd starter/backend/k8s
-          echo "$ECR_REGISTRY"
-          echo "$ECR_REPOSITORY"
-          echo "$IMAGE_TAG"
-          echo "$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
-          kustomize edit set image backend=${IMAGE_URL}
+          echo "IMAGE URL : ${IMAGE_URL}"
+          kustomize edit set image backend=${{ env.IMAGE_URL }}
 
       - name: Apply Kubernetes resources
         run: |
           cd starter/backend/k8s
           kustomize build > k8s.yaml
           cat k8s.yaml
-          kubectl apply -f -
+          kubectl apply -f k8s.yaml
       
