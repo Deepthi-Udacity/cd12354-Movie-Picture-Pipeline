@@ -154,6 +154,8 @@ jobs:
           kustomize build | kubectl apply -f -
           kubectl rollout restart deployment/backend
           echo "Completed deployment"
+          kubectl get pods
+          echo "Completed"
   # deploy:
   #   name: Deploy Docker image
   #   needs: [ build ]
