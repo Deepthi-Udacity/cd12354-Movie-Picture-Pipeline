@@ -138,6 +138,7 @@ jobs:
       - name: Apply Kubernetes resources
         run: |
             cd starter/backend/k8s
-            kustomize build
+            kustomize build > k8s.yaml
+            cat k8s.yaml
             kubectl apply -f -
       
