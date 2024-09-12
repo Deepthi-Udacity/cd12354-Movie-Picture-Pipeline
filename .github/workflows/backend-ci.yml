@@ -36,6 +36,7 @@ jobs:
         run: cd starter/backend && pipenv run lint
 
   test:
+    name: Run Tests
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -63,6 +64,7 @@ jobs:
         run: cd starter/backend && pipenv run test
 
   build:
+    name: Build and Push Docker Image
     needs: [ lint, test ]
     runs-on: ubuntu-latest
     steps:
