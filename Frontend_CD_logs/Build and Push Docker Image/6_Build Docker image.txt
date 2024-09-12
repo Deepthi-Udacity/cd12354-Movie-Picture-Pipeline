@@ -1,0 +1,157 @@
+﻿2024-09-12T19:02:28.1426593Z ##[group]Run cd starter/frontend
+2024-09-12T19:02:28.1427158Z [36;1mcd starter/frontend[0m
+2024-09-12T19:02:28.1427960Z [36;1mdocker build --build-arg REACT_APP_MOVIE_API_URL=$BACKEND_ENDPOINT -t "$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" .[0m
+2024-09-12T19:02:28.1428968Z [36;1mdocker push "$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"[0m
+2024-09-12T19:02:28.1429586Z [36;1mecho "image_uri=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"[0m
+2024-09-12T19:02:28.1430143Z [36;1mecho "Image pushed"[0m
+2024-09-12T19:02:28.1458021Z shell: /usr/bin/bash -e {0}
+2024-09-12T19:02:28.1458607Z env:
+2024-09-12T19:02:28.1459103Z   ECR_REGISTRY: 734185875006.dkr.ecr.us-east-1.amazonaws.com
+2024-09-12T19:02:28.1459646Z   ECR_REPOSITORY: frontend
+2024-09-12T19:02:28.1460127Z   IMAGE_TAG: latest
+2024-09-12T19:02:28.1460757Z   BACKEND_ENDPOINT: http://a0fb3821c9b4b40978dcd049ee119c84-705708349.us-east-1.elb.amazonaws.com
+2024-09-12T19:02:28.1461547Z ##[endgroup]
+2024-09-12T19:02:28.4704217Z #0 building with "default" instance using docker driver
+2024-09-12T19:02:28.4705134Z 
+2024-09-12T19:02:28.4705808Z #1 [internal] load build definition from Dockerfile
+2024-09-12T19:02:28.4706822Z #1 transferring dockerfile: 462B done
+2024-09-12T19:02:28.4707447Z #1 DONE 0.0s
+2024-09-12T19:02:28.4707738Z 
+2024-09-12T19:02:28.4708480Z #2 [internal] load metadata for public.ecr.aws/docker/library/node:18.14.2-alpine3.17
+2024-09-12T19:02:28.8729614Z #2 DONE 0.6s
+2024-09-12T19:02:28.9885662Z 
+2024-09-12T19:02:28.9887038Z #3 [internal] load .dockerignore
+2024-09-12T19:02:28.9887999Z #3 transferring context: 2B done
+2024-09-12T19:02:28.9889036Z #3 DONE 0.0s
+2024-09-12T19:02:28.9889340Z 
+2024-09-12T19:02:28.9889720Z #4 [internal] load build context
+2024-09-12T19:02:28.9891026Z #4 transferring context: 708.32kB done
+2024-09-12T19:02:28.9891886Z #4 DONE 0.0s
+2024-09-12T19:02:28.9892180Z 
+2024-09-12T19:02:28.9893976Z #5 [1/6] FROM public.ecr.aws/docker/library/node:18.14.2-alpine3.17@sha256:f8a51c36b0be7434bbf867d4a08decf0100e656203d893b9b0f8b1fe9e40daea
+2024-09-12T19:02:28.9896322Z #5 resolve public.ecr.aws/docker/library/node:18.14.2-alpine3.17@sha256:f8a51c36b0be7434bbf867d4a08decf0100e656203d893b9b0f8b1fe9e40daea done
+2024-09-12T19:02:28.9897856Z #5 sha256:061765f30124ad9dd30397cf60c64741d3fb3b34c36f9566796687b1299183f5 0B / 47.51MB 0.1s
+2024-09-12T19:02:28.9898965Z #5 sha256:478140d591162fa9113c5ba76c16afafe2aa04bccd8ec45c232ffeb4f31e9c23 0B / 2.35MB 0.1s
+2024-09-12T19:02:28.9900158Z #5 sha256:f8a51c36b0be7434bbf867d4a08decf0100e656203d893b9b0f8b1fe9e40daea 1.43kB / 1.43kB done
+2024-09-12T19:02:28.9901235Z #5 sha256:fdbd2737cb94e25cae3db9fc5d7dc073c9675dad34239bfb3948c499a6908c19 1.16kB / 1.16kB done
+2024-09-12T19:02:28.9902214Z #5 sha256:9423415aa47ab401c3f202dd56fdf379f6161a620cc51caa048887d9bdddd246 6.44kB / 6.44kB done
+2024-09-12T19:02:28.9903215Z #5 sha256:63b65145d645c1250c391b2d16ebe53b3747c295ca8ba2fcb6b0cf064a4dc21c 0B / 3.37MB 0.1s
+2024-09-12T19:02:29.1487234Z #5 sha256:061765f30124ad9dd30397cf60c64741d3fb3b34c36f9566796687b1299183f5 47.26MB / 47.51MB 0.3s
+2024-09-12T19:02:29.2621521Z #5 sha256:63b65145d645c1250c391b2d16ebe53b3747c295ca8ba2fcb6b0cf064a4dc21c 3.37MB / 3.37MB 0.3s
+2024-09-12T19:02:29.2624030Z #5 extracting sha256:63b65145d645c1250c391b2d16ebe53b3747c295ca8ba2fcb6b0cf064a4dc21c 0.1s done
+2024-09-12T19:02:29.3880069Z #5 sha256:061765f30124ad9dd30397cf60c64741d3fb3b34c36f9566796687b1299183f5 47.51MB / 47.51MB 0.3s done
+2024-09-12T19:02:29.3882060Z #5 sha256:478140d591162fa9113c5ba76c16afafe2aa04bccd8ec45c232ffeb4f31e9c23 2.10MB / 2.35MB 0.5s
+2024-09-12T19:02:29.3884181Z #5 sha256:63b65145d645c1250c391b2d16ebe53b3747c295ca8ba2fcb6b0cf064a4dc21c 3.37MB / 3.37MB 0.3s done
+2024-09-12T19:02:29.3885984Z #5 sha256:00ca3aba45c3a9811387d943d26291284ca6f938036760fcf85dbb2ab78e496a 450B / 450B 0.5s done
+2024-09-12T19:02:29.3887795Z #5 extracting sha256:061765f30124ad9dd30397cf60c64741d3fb3b34c36f9566796687b1299183f5
+2024-09-12T19:02:29.5884429Z #5 sha256:478140d591162fa9113c5ba76c16afafe2aa04bccd8ec45c232ffeb4f31e9c23 2.35MB / 2.35MB 0.7s
+2024-09-12T19:02:29.7307434Z #5 sha256:478140d591162fa9113c5ba76c16afafe2aa04bccd8ec45c232ffeb4f31e9c23 2.35MB / 2.35MB 0.7s done
+2024-09-12T19:02:31.0841454Z #5 extracting sha256:061765f30124ad9dd30397cf60c64741d3fb3b34c36f9566796687b1299183f5 1.8s done
+2024-09-12T19:02:31.4063331Z #5 extracting sha256:478140d591162fa9113c5ba76c16afafe2aa04bccd8ec45c232ffeb4f31e9c23
+2024-09-12T19:02:31.5252395Z #5 extracting sha256:478140d591162fa9113c5ba76c16afafe2aa04bccd8ec45c232ffeb4f31e9c23 0.0s done
+2024-09-12T19:02:31.5253733Z #5 extracting sha256:00ca3aba45c3a9811387d943d26291284ca6f938036760fcf85dbb2ab78e496a done
+2024-09-12T19:02:31.5254689Z #5 DONE 2.6s
+2024-09-12T19:02:31.6954710Z 
+2024-09-12T19:02:31.6957478Z #6 [2/6] WORKDIR /app
+2024-09-12T19:02:31.6958937Z #6 DONE 0.0s
+2024-09-12T19:02:31.6959299Z 
+2024-09-12T19:02:31.6960139Z #7 [3/6] COPY package*.json ./
+2024-09-12T19:02:31.6961180Z #7 DONE 0.0s
+2024-09-12T19:02:31.6961622Z 
+2024-09-12T19:02:31.6961973Z #8 [4/6] RUN npm ci
+2024-09-12T19:02:38.2264224Z #8 6.681 npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
+2024-09-12T19:02:38.5639330Z #8 7.019 npm WARN deprecated stable@0.1.8: Modern JS already guarantees Array#sort() is a stable sort, so this library is deprecated. See the compatibility table on MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility
+2024-09-12T19:02:38.7921263Z #8 7.102 npm WARN deprecated rollup-plugin-terser@7.0.2: This package has been deprecated and is no longer maintained. Please use @rollup/plugin-terser
+2024-09-12T19:02:38.7923559Z #8 7.247 npm WARN deprecated sourcemap-codec@1.4.8: Please use @jridgewell/sourcemap-codec instead
+2024-09-12T19:02:42.3304565Z #8 10.79 npm WARN deprecated svgo@1.3.2: This SVGO version is no longer supported. Upgrade to v2.x.x.
+2024-09-12T19:02:52.4304009Z #8 20.89 
+2024-09-12T19:02:52.4305907Z #8 20.89 added 1506 packages, and audited 1507 packages in 20s
+2024-09-12T19:02:52.6142707Z #8 20.89 
+2024-09-12T19:02:52.6146869Z #8 20.89 263 packages are looking for funding
+2024-09-12T19:02:52.6148209Z #8 20.89   run `npm fund` for details
+2024-09-12T19:02:52.6148816Z #8 20.92 
+2024-09-12T19:02:52.6170010Z #8 20.92 28 vulnerabilities (10 moderate, 16 high, 2 critical)
+2024-09-12T19:02:52.6170949Z #8 20.92 
+2024-09-12T19:02:52.6171702Z #8 20.92 To address issues that do not require attention, run:
+2024-09-12T19:02:52.6172705Z #8 20.92   npm audit fix
+2024-09-12T19:02:52.6176947Z #8 20.92 
+2024-09-12T19:02:52.6178404Z #8 20.92 To address all issues (including breaking changes), run:
+2024-09-12T19:02:52.6180186Z #8 20.92   npm audit fix --force
+2024-09-12T19:02:52.6181274Z #8 20.92 
+2024-09-12T19:02:52.6182056Z #8 20.92 Run `npm audit` for details.
+2024-09-12T19:02:52.6184486Z #8 20.92 npm notice 
+2024-09-12T19:02:52.6185797Z #8 20.92 npm notice New major version of npm available! 9.5.0 -> 10.8.3
+2024-09-12T19:02:52.6187541Z #8 20.92 npm notice Changelog: <https://github.com/npm/cli/releases/tag/v10.8.3>
+2024-09-12T19:02:52.6189142Z #8 20.92 npm notice Run `npm install -g npm@10.8.3` to update!
+2024-09-12T19:02:52.6190204Z #8 20.92 npm notice 
+2024-09-12T19:02:53.4115301Z #8 DONE 21.9s
+2024-09-12T19:02:53.5785019Z 
+2024-09-12T19:02:53.5785824Z #9 [5/6] COPY . .
+2024-09-12T19:02:53.5786535Z #9 DONE 0.0s
+2024-09-12T19:02:53.5788448Z 
+2024-09-12T19:02:53.5790615Z #10 [6/6] RUN npm run build
+2024-09-12T19:02:54.0626724Z #10 0.634 
+2024-09-12T19:02:54.0627743Z #10 0.634 > frontend@1.0.0 build
+2024-09-12T19:02:54.0628935Z #10 0.634 > react-scripts build
+2024-09-12T19:02:54.0629866Z #10 0.634 
+2024-09-12T19:02:55.6614811Z #10 2.233 Creating an optimized production build...
+2024-09-12T19:02:55.8328543Z #10 2.405 Browserslist: caniuse-lite is outdated. Please run:
+2024-09-12T19:02:55.8329908Z #10 2.405   npx update-browserslist-db@latest
+2024-09-12T19:02:55.8331703Z #10 2.405   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+2024-09-12T19:03:02.1144851Z #10 8.686 Browserslist: caniuse-lite is outdated. Please run:
+2024-09-12T19:03:02.1147035Z #10 8.686   npx update-browserslist-db@latest
+2024-09-12T19:03:02.1148642Z #10 8.686   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+2024-09-12T19:03:02.6833218Z #10 9.255 Compiled successfully.
+2024-09-12T19:03:02.6834122Z #10 9.255 
+2024-09-12T19:03:02.6834819Z #10 9.255 File sizes after gzip:
+2024-09-12T19:03:02.6835650Z #10 9.255 
+2024-09-12T19:03:02.9274627Z #10 9.269   57.15 kB  build/static/js/main.f5a66f8b.js
+2024-09-12T19:03:02.9276733Z #10 9.269   556 B     build/static/css/main.86fcb180.css
+2024-09-12T19:03:02.9277850Z #10 9.269 
+2024-09-12T19:03:02.9279164Z #10 9.269 The project was built assuming it is hosted at /.
+2024-09-12T19:03:02.9284446Z #10 9.269 You can control this with the homepage field in your package.json.
+2024-09-12T19:03:02.9285601Z #10 9.270 
+2024-09-12T19:03:02.9286499Z #10 9.270 The build folder is ready to be deployed.
+2024-09-12T19:03:02.9287582Z #10 9.270 You may serve it with a static server:
+2024-09-12T19:03:02.9288378Z #10 9.270 
+2024-09-12T19:03:02.9289401Z #10 9.270   npm install -g serve
+2024-09-12T19:03:02.9290243Z #10 9.270   serve -s build
+2024-09-12T19:03:02.9290820Z #10 9.270 
+2024-09-12T19:03:02.9291674Z #10 9.270 Find out more about deployment here:
+2024-09-12T19:03:02.9292568Z #10 9.270 
+2024-09-12T19:03:02.9293411Z #10 9.270   https://cra.link/deployment
+2024-09-12T19:03:02.9294188Z #10 9.270 
+2024-09-12T19:03:02.9294723Z #10 DONE 9.3s
+2024-09-12T19:03:02.9295192Z 
+2024-09-12T19:03:02.9295451Z #11 exporting to image
+2024-09-12T19:03:02.9296103Z #11 exporting layers
+2024-09-12T19:03:08.8919170Z #11 exporting layers 6.1s done
+2024-09-12T19:03:08.9169087Z #11 writing image sha256:b3f33b7649c2d26b7e87dd7c70fab47ee9e4c4f590202ef8927ab11ef98b8a66 done
+2024-09-12T19:03:08.9171747Z #11 naming to 734185875006.dkr.ecr.us-east-1.amazonaws.com/frontend:latest done
+2024-09-12T19:03:08.9173170Z #11 DONE 6.1s
+2024-09-12T19:03:08.9522122Z The push refers to repository [734185875006.dkr.ecr.us-east-1.amazonaws.com/frontend]
+2024-09-12T19:03:09.2444905Z ca35bbaa10d8: Preparing
+2024-09-12T19:03:09.2446071Z c1340f798db1: Preparing
+2024-09-12T19:03:09.2446943Z 5ff90f4588b7: Preparing
+2024-09-12T19:03:09.2448011Z 152cfbbb80e9: Preparing
+2024-09-12T19:03:09.2448587Z 42501ec0e503: Preparing
+2024-09-12T19:03:09.2449082Z dc923cea9549: Preparing
+2024-09-12T19:03:09.2449592Z d26cfa2c5d93: Preparing
+2024-09-12T19:03:09.2449992Z ec7aaa5c3b9b: Preparing
+2024-09-12T19:03:09.2450393Z 7cd52847ad77: Preparing
+2024-09-12T19:03:09.2450832Z d26cfa2c5d93: Waiting
+2024-09-12T19:03:09.2451188Z 7cd52847ad77: Waiting
+2024-09-12T19:03:09.2451621Z ec7aaa5c3b9b: Waiting
+2024-09-12T19:03:09.2451990Z dc923cea9549: Waiting
+2024-09-12T19:03:10.7581082Z 42501ec0e503: Pushed
+2024-09-12T19:03:10.8656695Z c1340f798db1: Pushed
+2024-09-12T19:03:11.0924612Z dc923cea9549: Layer already exists
+2024-09-12T19:03:11.1577556Z ca35bbaa10d8: Pushed
+2024-09-12T19:03:11.1957598Z 152cfbbb80e9: Pushed
+2024-09-12T19:03:11.1988432Z d26cfa2c5d93: Layer already exists
+2024-09-12T19:03:11.4305076Z ec7aaa5c3b9b: Layer already exists
+2024-09-12T19:03:11.4938288Z 7cd52847ad77: Layer already exists
+2024-09-12T19:03:24.1448097Z 5ff90f4588b7: Pushed
+2024-09-12T19:03:26.5765489Z latest: digest: sha256:b690a651cdf8183860b1dc3e73eb9a122cb37e6db132b671795d430342b39fd3 size: 2206
+2024-09-12T19:03:26.5788579Z image_uri=734185875006.dkr.ecr.us-east-1.amazonaws.com/frontend:latest
+2024-09-12T19:03:26.5789242Z Image pushed

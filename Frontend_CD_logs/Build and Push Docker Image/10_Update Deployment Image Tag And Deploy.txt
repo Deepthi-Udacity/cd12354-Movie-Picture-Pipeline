@@ -1,0 +1,25 @@
+﻿2024-09-12T19:03:31.7946559Z ##[group]Run kustomize edit set image frontend=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+2024-09-12T19:03:31.7947603Z [36;1mkustomize edit set image frontend=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG[0m
+2024-09-12T19:03:31.7948295Z [36;1mkustomize build | kubectl apply -f -[0m
+2024-09-12T19:03:31.7948824Z [36;1mkubectl rollout restart deployment/frontend[0m
+2024-09-12T19:03:31.7949407Z [36;1mecho "Completed deployment"[0m
+2024-09-12T19:03:31.7949801Z [36;1mkubectl get pods[0m
+2024-09-12T19:03:31.7950185Z [36;1mecho "Completed"[0m
+2024-09-12T19:03:31.7975719Z shell: /usr/bin/bash -e {0}
+2024-09-12T19:03:31.7976229Z env:
+2024-09-12T19:03:31.7976635Z   AWS_ACCESS_KEY_ID: ***
+2024-09-12T19:03:31.7977181Z   AWS_SECRET_ACCESS_KEY: ***
+2024-09-12T19:03:31.7977638Z   AWS_REGION: us-east-1
+2024-09-12T19:03:31.7978115Z   ECR_REGISTRY: 734185875006.dkr.ecr.us-east-1.amazonaws.com
+2024-09-12T19:03:31.7978583Z   ECR_REPOSITORY: frontend
+2024-09-12T19:03:31.7979019Z   IMAGE_TAG: latest
+2024-09-12T19:03:31.7979496Z ##[endgroup]
+2024-09-12T19:03:37.1358892Z service/frontend unchanged
+2024-09-12T19:03:37.2381044Z deployment.apps/frontend unchanged
+2024-09-12T19:03:38.2761390Z deployment.apps/frontend restarted
+2024-09-12T19:03:38.2781755Z Completed deployment
+2024-09-12T19:03:39.2886793Z NAME                        READY   STATUS              RESTARTS   AGE
+2024-09-12T19:03:39.2888437Z backend-7779d9697b-5zkbk    1/1     Running             0          5m19s
+2024-09-12T19:03:39.2890263Z frontend-6b677c5dfd-25p85   0/1     ContainerCreating   0          1s
+2024-09-12T19:03:39.2891699Z frontend-767b98cd8c-x8wh4   1/1     Running             0          7m59s
+2024-09-12T19:03:39.2908862Z Completed

@@ -1,0 +1,19 @@
+﻿2024-09-12T18:56:53.2374875Z ##[group]Run actions/cache@v3
+2024-09-12T18:56:53.2375499Z with:
+2024-09-12T18:56:53.2375834Z   path: ~/.local/share/virtualenvs
+2024-09-12T18:56:53.2376459Z   key: Linux-pipenv-8a33228c7833befedb65840f499ae74afe02c1d1cc42478bf4f8ea3d75473c7c
+2024-09-12T18:56:53.2377232Z   enableCrossOsArchive: false
+2024-09-12T18:56:53.2377636Z   fail-on-cache-miss: false
+2024-09-12T18:56:53.2378012Z   lookup-only: false
+2024-09-12T18:56:53.2378439Z env:
+2024-09-12T18:56:53.2378902Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.14/x64
+2024-09-12T18:56:53.2379544Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.14/x64/lib/pkgconfig
+2024-09-12T18:56:53.2380237Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.14/x64
+2024-09-12T18:56:53.2380809Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.14/x64
+2024-09-12T18:56:53.2381393Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.14/x64
+2024-09-12T18:56:53.2381998Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.14/x64/lib
+2024-09-12T18:56:53.2382486Z ##[endgroup]
+2024-09-12T18:56:54.0308326Z Cache Size: ~5 MB (5213871 B)
+2024-09-12T18:56:54.0339115Z [command]/usr/bin/tar -xf /home/runner/work/_temp/4a6f30d8-d731-4aad-8b9e-f7250feed29b/cache.tzst -P -C /home/runner/work/cd12354-Movie-Picture-Pipeline/cd12354-Movie-Picture-Pipeline --use-compress-program unzstd
+2024-09-12T18:56:54.1444678Z Cache restored successfully
+2024-09-12T18:56:54.1629029Z Cache restored from key: Linux-pipenv-8a33228c7833befedb65840f499ae74afe02c1d1cc42478bf4f8ea3d75473c7c

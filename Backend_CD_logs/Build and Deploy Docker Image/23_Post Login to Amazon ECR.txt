@@ -1,0 +1,2 @@
+﻿2024-09-12T18:58:22.3159288Z Post job cleanup.
+2024-09-12T18:58:22.3508213Z Logging out of registry 734185875006.dkr.ecr.us-east-1.amazonaws.com

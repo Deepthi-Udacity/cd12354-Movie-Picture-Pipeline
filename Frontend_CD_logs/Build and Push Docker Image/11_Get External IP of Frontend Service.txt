@@ -1,0 +1,10 @@
+﻿2024-09-12T19:03:39.2945178Z ##[group]Run EXTERNAL_IP=$(kubectl get svc frontend -o jsonpath='{.status.loadBalancer.ingress[0].hostname}')
+2024-09-12T19:03:39.2946302Z [36;1mEXTERNAL_IP=$(kubectl get svc frontend -o jsonpath='{.status.loadBalancer.ingress[0].hostname}')[0m
+2024-09-12T19:03:39.2947034Z [36;1mecho "External IP: $EXTERNAL_IP"[0m
+2024-09-12T19:03:39.2972169Z shell: /usr/bin/bash -e {0}
+2024-09-12T19:03:39.2972730Z env:
+2024-09-12T19:03:39.2973183Z   AWS_ACCESS_KEY_ID: ***
+2024-09-12T19:03:39.2973735Z   AWS_SECRET_ACCESS_KEY: ***
+2024-09-12T19:03:39.2974212Z   AWS_REGION: us-east-1
+2024-09-12T19:03:39.2974583Z ##[endgroup]
+2024-09-12T19:03:40.2267456Z External IP: a86afd27f69e14aa08743a7e75faaafa-162623597.us-east-1.elb.amazonaws.com

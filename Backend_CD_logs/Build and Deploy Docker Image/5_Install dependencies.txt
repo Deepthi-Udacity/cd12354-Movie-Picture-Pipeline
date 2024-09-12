@@ -1,0 +1,27 @@
+﻿2024-09-12T18:57:13.8807164Z ##[group]Run cd starter/backend && pipenv install
+2024-09-12T18:57:13.8807789Z [36;1mcd starter/backend && pipenv install[0m
+2024-09-12T18:57:13.8832942Z shell: /usr/bin/bash -e {0}
+2024-09-12T18:57:13.8833332Z env:
+2024-09-12T18:57:13.8833831Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.14/x64
+2024-09-12T18:57:13.8834507Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.14/x64/lib/pkgconfig
+2024-09-12T18:57:13.8835167Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.14/x64
+2024-09-12T18:57:13.8835790Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.14/x64
+2024-09-12T18:57:13.8836404Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.14/x64
+2024-09-12T18:57:13.8836991Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.14/x64/lib
+2024-09-12T18:57:13.8837581Z ##[endgroup]
+2024-09-12T18:57:14.6798381Z Creating a virtualenv for this project...
+2024-09-12T18:57:14.6800713Z Pipfile: /home/runner/work/cd12354-Movie-Picture-Pipeline/cd12354-Movie-Picture-Pipeline/starter/backend/Pipfile
+2024-09-12T18:57:14.6916971Z Using /opt/hostedtoolcache/Python/3.10.14/x64/bin/python3 (3.10.14) to create virtualenv...
+2024-09-12T18:57:15.6206061Z created virtual environment CPython3.10.14.final.0-64 in 717ms
+2024-09-12T18:57:15.6208650Z   creator CPython3Posix(dest=/home/runner/.local/share/virtualenvs/backend-QnnwuTyC, clear=False, no_vcs_ignore=False, global=False)
+2024-09-12T18:57:15.6211352Z   seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=/home/runner/.local/share/virtualenv)
+2024-09-12T18:57:15.6213165Z     added seed packages: pip==24.2, setuptools==74.1.2, wheel==0.44.0
+2024-09-12T18:57:15.6215306Z   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+2024-09-12T18:57:15.6216719Z 
+2024-09-12T18:57:15.6217515Z Successfully created virtual environment!
+2024-09-12T18:57:15.6594778Z Virtualenv location: /home/runner/.local/share/virtualenvs/backend-QnnwuTyC
+2024-09-12T18:57:15.6988315Z To activate this project's virtualenv, run pipenv shell.
+2024-09-12T18:57:15.6990165Z Alternatively, run a command inside the virtualenv with pipenv run.
+2024-09-12T18:57:15.7092825Z To activate this project's virtualenv, run pipenv shell.
+2024-09-12T18:57:15.7094424Z Alternatively, run a command inside the virtualenv with pipenv run.
+2024-09-12T18:57:15.7112382Z Installing dependencies from Pipfile.lock (f8f835)...

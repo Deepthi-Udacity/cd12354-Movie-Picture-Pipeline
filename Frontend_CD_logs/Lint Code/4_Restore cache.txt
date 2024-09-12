@@ -1,0 +1,12 @@
+﻿2024-09-12T19:01:47.6429271Z ##[group]Run actions/cache@v3
+2024-09-12T19:01:47.6429764Z with:
+2024-09-12T19:01:47.6430197Z   path: ~/.npm
+2024-09-12T19:01:47.6430532Z   key: npm-cache-
+2024-09-12T19:01:47.6430973Z   enableCrossOsArchive: false
+2024-09-12T19:01:47.6431450Z   fail-on-cache-miss: false
+2024-09-12T19:01:47.6431799Z   lookup-only: false
+2024-09-12T19:01:47.6432453Z ##[endgroup]
+2024-09-12T19:01:48.2225377Z Cache Size: ~59 MB (61590686 B)
+2024-09-12T19:01:48.2248992Z [command]/usr/bin/tar -xf /home/runner/work/_temp/85f21f87-d07c-4c30-a32e-ddf0daa92bd1/cache.tzst -P -C /home/runner/work/cd12354-Movie-Picture-Pipeline/cd12354-Movie-Picture-Pipeline --use-compress-program unzstd
+2024-09-12T19:01:48.7016024Z Cache restored successfully
+2024-09-12T19:01:48.7291259Z Cache restored from key: npm-cache-

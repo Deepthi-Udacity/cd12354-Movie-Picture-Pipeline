@@ -1,0 +1,5 @@
+﻿2024-09-12T19:03:26.5827103Z ##[group]Run aws --version
+2024-09-12T19:03:26.5827666Z [36;1maws --version[0m
+2024-09-12T19:03:26.5852545Z shell: /usr/bin/bash -e {0}
+2024-09-12T19:03:26.5852909Z ##[endgroup]
+2024-09-12T19:03:29.5522534Z aws-cli/2.17.46 Python/3.11.9 Linux/6.5.0-1025-azure exe/x86_64.ubuntu.22

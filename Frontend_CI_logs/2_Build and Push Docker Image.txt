@@ -1,0 +1,658 @@
+﻿2024-09-12T11:32:30.3806640Z Current runner version: '2.319.1'
+2024-09-12T11:32:30.3830824Z ##[group]Operating System
+2024-09-12T11:32:30.3831626Z Ubuntu
+2024-09-12T11:32:30.3831986Z 22.04.4
+2024-09-12T11:32:30.3832286Z LTS
+2024-09-12T11:32:30.3832721Z ##[endgroup]
+2024-09-12T11:32:30.3833124Z ##[group]Runner Image
+2024-09-12T11:32:30.3833569Z Image: ubuntu-22.04
+2024-09-12T11:32:30.3834073Z Version: 20240908.1.0
+2024-09-12T11:32:30.3835043Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20240908.1/images/ubuntu/Ubuntu2204-Readme.md
+2024-09-12T11:32:30.3836512Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20240908.1
+2024-09-12T11:32:30.3837462Z ##[endgroup]
+2024-09-12T11:32:30.3837866Z ##[group]Runner Image Provisioner
+2024-09-12T11:32:30.3838375Z 2.0.384.1
+2024-09-12T11:32:30.3838794Z ##[endgroup]
+2024-09-12T11:32:30.3854545Z ##[group]GITHUB_TOKEN Permissions
+2024-09-12T11:32:30.3856603Z Contents: read
+2024-09-12T11:32:30.3857106Z Metadata: read
+2024-09-12T11:32:30.3857945Z Packages: read
+2024-09-12T11:32:30.3858544Z ##[endgroup]
+2024-09-12T11:32:30.3860724Z Secret source: Actions
+2024-09-12T11:32:30.3861371Z Prepare workflow directory
+2024-09-12T11:32:30.4497923Z Prepare all required actions
+2024-09-12T11:32:30.4656751Z Getting action download info
+2024-09-12T11:32:30.6887438Z Download action repository 'actions/checkout@v3' (SHA:f43a0e5ff2bd294095638e18286ca9a3d1956744)
+2024-09-12T11:32:30.8224569Z Download action repository 'actions/setup-node@v3' (SHA:1a4442cacd436585916779262731d5b162bc6ec7)
+2024-09-12T11:32:30.9284004Z Download action repository 'docker/setup-buildx-action@v2' (SHA:885d1462b80bc1c1c7f0b00334ad271f09369c55)
+2024-09-12T11:32:31.5054243Z Download action repository 'aws-actions/amazon-ecr-login@v1' (SHA:2fc7aceee09e9e4a7105c0d060c656fad0b4f63d)
+2024-09-12T11:32:32.0601313Z Complete job name: Build and Push Docker Image
+2024-09-12T11:32:32.1537417Z ##[group]Run actions/checkout@v3
+2024-09-12T11:32:32.1537936Z with:
+2024-09-12T11:32:32.1538417Z   repository: Deepthi-Udacity/cd12354-Movie-Picture-Pipeline
+2024-09-12T11:32:32.1539298Z   token: ***
+2024-09-12T11:32:32.1539682Z   ssh-strict: true
+2024-09-12T11:32:32.1540068Z   persist-credentials: true
+2024-09-12T11:32:32.1540527Z   clean: true
+2024-09-12T11:32:32.1540885Z   sparse-checkout-cone-mode: true
+2024-09-12T11:32:32.1541313Z   fetch-depth: 1
+2024-09-12T11:32:32.1541723Z   fetch-tags: false
+2024-09-12T11:32:32.1542076Z   lfs: false
+2024-09-12T11:32:32.1542382Z   submodules: false
+2024-09-12T11:32:32.1542816Z   set-safe-directory: true
+2024-09-12T11:32:32.1543208Z ##[endgroup]
+2024-09-12T11:32:32.4216519Z Syncing repository: Deepthi-Udacity/cd12354-Movie-Picture-Pipeline
+2024-09-12T11:32:32.4218497Z ##[group]Getting Git version info
+2024-09-12T11:32:32.4219598Z Working directory is '/home/runner/work/cd12354-Movie-Picture-Pipeline/cd12354-Movie-Picture-Pipeline'
+2024-09-12T11:32:32.4220803Z [command]/usr/bin/git version
+2024-09-12T11:32:32.4280104Z git version 2.46.0
+2024-09-12T11:32:32.4306632Z ##[endgroup]
+2024-09-12T11:32:32.4326359Z Temporarily overriding HOME='/home/runner/work/_temp/c9a846d5-6c29-4ada-a3a0-fc470e644002' before making global git config changes
+2024-09-12T11:32:32.4327700Z Adding repository directory to the temporary git global config as a safe directory
+2024-09-12T11:32:32.4329783Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cd12354-Movie-Picture-Pipeline/cd12354-Movie-Picture-Pipeline
+2024-09-12T11:32:32.4374708Z Deleting the contents of '/home/runner/work/cd12354-Movie-Picture-Pipeline/cd12354-Movie-Picture-Pipeline'
+2024-09-12T11:32:32.4378541Z ##[group]Initializing the repository
+2024-09-12T11:32:32.4382182Z [command]/usr/bin/git init /home/runner/work/cd12354-Movie-Picture-Pipeline/cd12354-Movie-Picture-Pipeline
+2024-09-12T11:32:32.4468004Z hint: Using 'master' as the name for the initial branch. This default branch name
+2024-09-12T11:32:32.4469674Z hint: is subject to change. To configure the initial branch name to use in all
+2024-09-12T11:32:32.4471180Z hint: of your new repositories, which will suppress this warning, call:
+2024-09-12T11:32:32.4472740Z hint:
+2024-09-12T11:32:32.4473628Z hint: 	git config --global init.defaultBranch <name>
+2024-09-12T11:32:32.4474475Z hint:
+2024-09-12T11:32:32.4475565Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2024-09-12T11:32:32.4477097Z hint: 'development'. The just-created branch can be renamed via this command:
+2024-09-12T11:32:32.4478202Z hint:
+2024-09-12T11:32:32.4479182Z hint: 	git branch -m <name>
+2024-09-12T11:32:32.4480868Z Initialized empty Git repository in /home/runner/work/cd12354-Movie-Picture-Pipeline/cd12354-Movie-Picture-Pipeline/.git/
+2024-09-12T11:32:32.4487855Z [command]/usr/bin/git remote add origin https://github.com/Deepthi-Udacity/cd12354-Movie-Picture-Pipeline
+2024-09-12T11:32:32.4529364Z ##[endgroup]
+2024-09-12T11:32:32.4530822Z ##[group]Disabling automatic garbage collection
+2024-09-12T11:32:32.4532350Z [command]/usr/bin/git config --local gc.auto 0
+2024-09-12T11:32:32.4562545Z ##[endgroup]
+2024-09-12T11:32:32.4563651Z ##[group]Setting up auth
+2024-09-12T11:32:32.4569045Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2024-09-12T11:32:32.4600707Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2024-09-12T11:32:32.5048522Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2024-09-12T11:32:32.5081037Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2024-09-12T11:32:32.5360934Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2024-09-12T11:32:32.5397678Z ##[endgroup]
+2024-09-12T11:32:32.5399060Z ##[group]Fetching the repository
+2024-09-12T11:32:32.5407598Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +fc7999ee5efc49dc43b197e8307fc09f88b397fe:refs/remotes/origin/main
+2024-09-12T11:32:32.8816830Z remote: Enumerating objects: 66, done.        
+2024-09-12T11:32:32.8818069Z remote: Counting objects:   1% (1/66)        
+2024-09-12T11:32:32.8818817Z remote: Counting objects:   3% (2/66)        
+2024-09-12T11:32:32.8819934Z remote: Counting objects:   4% (3/66)        
+2024-09-12T11:32:32.8820881Z remote: Counting objects:   6% (4/66)        
+2024-09-12T11:32:32.8821704Z remote: Counting objects:   7% (5/66)        
+2024-09-12T11:32:32.8822422Z remote: Counting objects:   9% (6/66)        
+2024-09-12T11:32:32.8822989Z remote: Counting objects:  10% (7/66)        
+2024-09-12T11:32:32.8823662Z remote: Counting objects:  12% (8/66)        
+2024-09-12T11:32:32.8824246Z remote: Counting objects:  13% (9/66)        
+2024-09-12T11:32:32.8824838Z remote: Counting objects:  15% (10/66)        
+2024-09-12T11:32:32.8825509Z remote: Counting objects:  16% (11/66)        
+2024-09-12T11:32:32.8826084Z remote: Counting objects:  18% (12/66)        
+2024-09-12T11:32:32.8826660Z remote: Counting objects:  19% (13/66)        
+2024-09-12T11:32:32.8827288Z remote: Counting objects:  21% (14/66)        
+2024-09-12T11:32:32.8827819Z remote: Counting objects:  22% (15/66)        
+2024-09-12T11:32:32.8828340Z remote: Counting objects:  24% (16/66)        
+2024-09-12T11:32:32.8828887Z remote: Counting objects:  25% (17/66)        
+2024-09-12T11:32:32.8829440Z remote: Counting objects:  27% (18/66)        
+2024-09-12T11:32:32.8829915Z remote: Counting objects:  28% (19/66)        
+2024-09-12T11:32:32.8830467Z remote: Counting objects:  30% (20/66)        
+2024-09-12T11:32:32.8830956Z remote: Counting objects:  31% (21/66)        
+2024-09-12T11:32:32.8831840Z remote: Counting objects:  33% (22/66)        
+2024-09-12T11:32:32.8833136Z remote: Counting objects:  34% (23/66)        
+2024-09-12T11:32:32.8834462Z remote: Counting objects:  36% (24/66)        
+2024-09-12T11:32:32.8835154Z remote: Counting objects:  37% (25/66)        
+2024-09-12T11:32:32.8836029Z remote: Counting objects:  39% (26/66)        
+2024-09-12T11:32:32.8836729Z remote: Counting objects:  40% (27/66)        
+2024-09-12T11:32:32.8837288Z remote: Counting objects:  42% (28/66)        
+2024-09-12T11:32:32.8837859Z remote: Counting objects:  43% (29/66)        
+2024-09-12T11:32:32.8838362Z remote: Counting objects:  45% (30/66)        
+2024-09-12T11:32:32.8838938Z remote: Counting objects:  46% (31/66)        
+2024-09-12T11:32:32.8839499Z remote: Counting objects:  48% (32/66)        
+2024-09-12T11:32:32.8840128Z remote: Counting objects:  50% (33/66)        
+2024-09-12T11:32:32.8840889Z remote: Counting objects:  51% (34/66)        
+2024-09-12T11:32:32.8841496Z remote: Counting objects:  53% (35/66)        
+2024-09-12T11:32:32.8842168Z remote: Counting objects:  54% (36/66)        
+2024-09-12T11:32:32.8842726Z remote: Counting objects:  56% (37/66)        
+2024-09-12T11:32:32.8843329Z remote: Counting objects:  57% (38/66)        
+2024-09-12T11:32:32.8843954Z remote: Counting objects:  59% (39/66)        
+2024-09-12T11:32:32.8844487Z remote: Counting objects:  60% (40/66)        
+2024-09-12T11:32:32.8845071Z remote: Counting objects:  62% (41/66)        
+2024-09-12T11:32:32.8846181Z remote: Counting objects:  63% (42/66)        
+2024-09-12T11:32:32.8846748Z remote: Counting objects:  65% (43/66)        
+2024-09-12T11:32:32.8847390Z remote: Counting objects:  66% (44/66)        
+2024-09-12T11:32:32.8848057Z remote: Counting objects:  68% (45/66)        
+2024-09-12T11:32:32.8848647Z remote: Counting objects:  69% (46/66)        
+2024-09-12T11:32:32.8849162Z remote: Counting objects:  71% (47/66)        
+2024-09-12T11:32:32.8849867Z remote: Counting objects:  72% (48/66)        
+2024-09-12T11:32:32.8850702Z remote: Counting objects:  74% (49/66)        
+2024-09-12T11:32:32.8851303Z remote: Counting objects:  75% (50/66)        
+2024-09-12T11:32:32.8852019Z remote: Counting objects:  77% (51/66)        
+2024-09-12T11:32:32.8852546Z remote: Counting objects:  78% (52/66)        
+2024-09-12T11:32:32.8853238Z remote: Counting objects:  80% (53/66)        
+2024-09-12T11:32:32.8853849Z remote: Counting objects:  81% (54/66)        
+2024-09-12T11:32:32.8854445Z remote: Counting objects:  83% (55/66)        
+2024-09-12T11:32:32.8854986Z remote: Counting objects:  84% (56/66)        
+2024-09-12T11:32:32.8855618Z remote: Counting objects:  86% (57/66)        
+2024-09-12T11:32:32.8856196Z remote: Counting objects:  87% (58/66)        
+2024-09-12T11:32:32.8856816Z remote: Counting objects:  89% (59/66)        
+2024-09-12T11:32:32.8857362Z remote: Counting objects:  90% (60/66)        
+2024-09-12T11:32:32.8857911Z remote: Counting objects:  92% (61/66)        
+2024-09-12T11:32:32.8858637Z remote: Counting objects:  93% (62/66)        
+2024-09-12T11:32:32.8859391Z remote: Counting objects:  95% (63/66)        
+2024-09-12T11:32:32.8859905Z remote: Counting objects:  96% (64/66)        
+2024-09-12T11:32:32.8860982Z remote: Counting objects:  98% (65/66)        
+2024-09-12T11:32:32.8861537Z remote: Counting objects: 100% (66/66)        
+2024-09-12T11:32:32.8862320Z remote: Counting objects: 100% (66/66), done.        
+2024-09-12T11:32:32.8863016Z remote: Compressing objects:   1% (1/59)        
+2024-09-12T11:32:32.8863606Z remote: Compressing objects:   3% (2/59)        
+2024-09-12T11:32:32.8864309Z remote: Compressing objects:   5% (3/59)        
+2024-09-12T11:32:32.8864880Z remote: Compressing objects:   6% (4/59)        
+2024-09-12T11:32:32.8865494Z remote: Compressing objects:   8% (5/59)        
+2024-09-12T11:32:32.8866191Z remote: Compressing objects:  10% (6/59)        
+2024-09-12T11:32:32.8866739Z remote: Compressing objects:  11% (7/59)        
+2024-09-12T11:32:32.8867275Z remote: Compressing objects:  13% (8/59)        
+2024-09-12T11:32:32.8868008Z remote: Compressing objects:  15% (9/59)        
+2024-09-12T11:32:32.8868657Z remote: Compressing objects:  16% (10/59)        
+2024-09-12T11:32:32.8869550Z remote: Compressing objects:  18% (11/59)        
+2024-09-12T11:32:32.8870301Z remote: Compressing objects:  20% (12/59)        
+2024-09-12T11:32:32.8870819Z remote: Compressing objects:  22% (13/59)        
+2024-09-12T11:32:32.8871427Z remote: Compressing objects:  23% (14/59)        
+2024-09-12T11:32:32.8872166Z remote: Compressing objects:  25% (15/59)        
+2024-09-12T11:32:32.8872807Z remote: Compressing objects:  27% (16/59)        
+2024-09-12T11:32:32.8873475Z remote: Compressing objects:  28% (17/59)        
+2024-09-12T11:32:32.8873988Z remote: Compressing objects:  30% (18/59)        
+2024-09-12T11:32:32.8874584Z remote: Compressing objects:  32% (19/59)        
+2024-09-12T11:32:32.8875271Z remote: Compressing objects:  33% (20/59)        
+2024-09-12T11:32:32.8875882Z remote: Compressing objects:  35% (21/59)        
+2024-09-12T11:32:32.8876415Z remote: Compressing objects:  37% (22/59)        
+2024-09-12T11:32:32.8877120Z remote: Compressing objects:  38% (23/59)        
+2024-09-12T11:32:32.8877707Z remote: Compressing objects:  40% (24/59)        
+2024-09-12T11:32:32.8878275Z remote: Compressing objects:  42% (25/59)        
+2024-09-12T11:32:32.8878921Z remote: Compressing objects:  44% (26/59)        
+2024-09-12T11:32:32.8879560Z remote: Compressing objects:  45% (27/59)        
+2024-09-12T11:32:32.8880155Z remote: Compressing objects:  47% (28/59)        
+2024-09-12T11:32:32.8880817Z remote: Compressing objects:  49% (29/59)        
+2024-09-12T11:32:32.8881358Z remote: Compressing objects:  50% (30/59)        
+2024-09-12T11:32:32.8881949Z remote: Compressing objects:  52% (31/59)        
+2024-09-12T11:32:32.8882567Z remote: Compressing objects:  54% (32/59)        
+2024-09-12T11:32:32.8883059Z remote: Compressing objects:  55% (33/59)        
+2024-09-12T11:32:32.8883975Z remote: Compressing objects:  57% (34/59)        
+2024-09-12T11:32:32.8884533Z remote: Compressing objects:  59% (35/59)        
+2024-09-12T11:32:32.8884990Z remote: Compressing objects:  61% (36/59)        
+2024-09-12T11:32:32.8885970Z remote: Compressing objects:  62% (37/59)        
+2024-09-12T11:32:32.8886528Z remote: Compressing objects:  64% (38/59)        
+2024-09-12T11:32:32.8887024Z remote: Compressing objects:  66% (39/59)        
+2024-09-12T11:32:32.8887609Z remote: Compressing objects:  67% (40/59)        
+2024-09-12T11:32:32.8888103Z remote: Compressing objects:  69% (41/59)        
+2024-09-12T11:32:32.8888552Z remote: Compressing objects:  71% (42/59)        
+2024-09-12T11:32:32.8889147Z remote: Compressing objects:  72% (43/59)        
+2024-09-12T11:32:32.8889782Z remote: Compressing objects:  74% (44/59)        
+2024-09-12T11:32:32.8890293Z remote: Compressing objects:  76% (45/59)        
+2024-09-12T11:32:32.8890863Z remote: Compressing objects:  77% (46/59)        
+2024-09-12T11:32:32.8891326Z remote: Compressing objects:  79% (47/59)        
+2024-09-12T11:32:32.8891832Z remote: Compressing objects:  81% (48/59)        
+2024-09-12T11:32:32.8892397Z remote: Compressing objects:  83% (49/59)        
+2024-09-12T11:32:32.8892893Z remote: Compressing objects:  84% (50/59)        
+2024-09-12T11:32:32.8893465Z remote: Compressing objects:  86% (51/59)        
+2024-09-12T11:32:32.8893950Z remote: Compressing objects:  88% (52/59)        
+2024-09-12T11:32:32.8894415Z remote: Compressing objects:  89% (53/59)        
+2024-09-12T11:32:32.8894982Z remote: Compressing objects:  91% (54/59)        
+2024-09-12T11:32:32.8895475Z remote: Compressing objects:  93% (55/59)        
+2024-09-12T11:32:32.8895975Z remote: Compressing objects:  94% (56/59)        
+2024-09-12T11:32:32.8896671Z remote: Compressing objects:  96% (57/59)        
+2024-09-12T11:32:32.8897200Z remote: Compressing objects:  98% (58/59)        
+2024-09-12T11:32:32.8897660Z remote: Compressing objects: 100% (59/59)        
+2024-09-12T11:32:32.8898268Z remote: Compressing objects: 100% (59/59), done.        
+2024-09-12T11:32:32.9543019Z remote: Total 66 (delta 3), reused 56 (delta 2), pack-reused 0 (from 0)        
+2024-09-12T11:32:32.9612177Z From https://github.com/Deepthi-Udacity/cd12354-Movie-Picture-Pipeline
+2024-09-12T11:32:32.9613480Z  * [new ref]         fc7999ee5efc49dc43b197e8307fc09f88b397fe -> origin/main
+2024-09-12T11:32:32.9643285Z ##[endgroup]
+2024-09-12T11:32:32.9644336Z ##[group]Determining the checkout info
+2024-09-12T11:32:32.9646699Z ##[endgroup]
+2024-09-12T11:32:32.9647699Z ##[group]Checking out the ref
+2024-09-12T11:32:32.9652161Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2024-09-12T11:32:32.9768640Z Switched to a new branch 'main'
+2024-09-12T11:32:32.9770503Z branch 'main' set up to track 'origin/main'.
+2024-09-12T11:32:32.9777230Z ##[endgroup]
+2024-09-12T11:32:32.9815929Z [command]/usr/bin/git log -1 --format='%H'
+2024-09-12T11:32:32.9840189Z 'fc7999ee5efc49dc43b197e8307fc09f88b397fe'
+2024-09-12T11:32:33.0188503Z ##[group]Run actions/setup-node@v3
+2024-09-12T11:32:33.0189012Z with:
+2024-09-12T11:32:33.0189362Z   node-version: 18
+2024-09-12T11:32:33.0189775Z   always-auth: false
+2024-09-12T11:32:33.0190158Z   check-latest: false
+2024-09-12T11:32:33.0190706Z   token: ***
+2024-09-12T11:32:33.0191111Z ##[endgroup]
+2024-09-12T11:32:33.2051811Z Found in cache @ /opt/hostedtoolcache/node/18.20.4/x64
+2024-09-12T11:32:33.2059360Z ##[group]Environment details
+2024-09-12T11:32:33.6227460Z node: v18.20.4
+2024-09-12T11:32:33.6228167Z npm: 10.7.0
+2024-09-12T11:32:33.6229754Z yarn: 1.22.22
+2024-09-12T11:32:33.6231186Z ##[endgroup]
+2024-09-12T11:32:33.6379401Z ##[group]Run docker/setup-buildx-action@v2
+2024-09-12T11:32:33.6379901Z with:
+2024-09-12T11:32:33.6380344Z   driver: docker-container
+2024-09-12T11:32:33.6381055Z   buildkitd-flags: --allow-insecure-entitlement security.insecure --allow-insecure-entitlement network.host
+2024-09-12T11:32:33.6381746Z   install: false
+2024-09-12T11:32:33.6382222Z   use: true
+2024-09-12T11:32:33.6382551Z   cleanup: true
+2024-09-12T11:32:33.6382895Z ##[endgroup]
+2024-09-12T11:32:33.8021074Z ##[group]Docker info
+2024-09-12T11:32:33.8065785Z [command]/usr/bin/docker version
+2024-09-12T11:32:33.9190980Z Client: Docker Engine - Community
+2024-09-12T11:32:33.9193418Z  Version:           26.1.3
+2024-09-12T11:32:33.9194284Z  API version:       1.45
+2024-09-12T11:32:33.9194903Z  Go version:        go1.21.10
+2024-09-12T11:32:33.9195680Z  Git commit:        b72abbb
+2024-09-12T11:32:33.9196373Z  Built:             Thu May 16 08:33:29 2024
+2024-09-12T11:32:33.9197131Z  OS/Arch:           linux/amd64
+2024-09-12T11:32:33.9199018Z  Context:           default
+2024-09-12T11:32:33.9199389Z 
+2024-09-12T11:32:33.9199854Z Server: Docker Engine - Community
+2024-09-12T11:32:33.9200626Z  Engine:
+2024-09-12T11:32:33.9201101Z   Version:          26.1.3
+2024-09-12T11:32:33.9201807Z   API version:      1.45 (minimum version 1.24)
+2024-09-12T11:32:33.9202674Z   Go version:       go1.21.10
+2024-09-12T11:32:33.9203865Z   Git commit:       8e96db1
+2024-09-12T11:32:33.9204804Z   Built:            Thu May 16 08:33:29 2024
+2024-09-12T11:32:33.9206041Z   OS/Arch:          linux/amd64
+2024-09-12T11:32:33.9206777Z   Experimental:     false
+2024-09-12T11:32:33.9207457Z  containerd:
+2024-09-12T11:32:33.9208252Z   Version:          1.7.21
+2024-09-12T11:32:33.9209083Z   GitCommit:        472731909fa34bd7bc9c087e4c27943f9835f111
+2024-09-12T11:32:33.9210178Z  runc:
+2024-09-12T11:32:33.9210728Z   Version:          1.1.13
+2024-09-12T11:32:33.9211617Z   GitCommit:        v1.1.13-0-g58aa920
+2024-09-12T11:32:33.9212608Z  docker-init:
+2024-09-12T11:32:33.9213253Z   Version:          0.19.0
+2024-09-12T11:32:33.9213983Z   GitCommit:        de40ad0
+2024-09-12T11:32:33.9248041Z [command]/usr/bin/docker info
+2024-09-12T11:32:34.1503700Z Client: Docker Engine - Community
+2024-09-12T11:32:34.1505170Z  Version:    26.1.3
+2024-09-12T11:32:34.1506142Z  Context:    default
+2024-09-12T11:32:34.1506782Z  Debug Mode: false
+2024-09-12T11:32:34.1507277Z  Plugins:
+2024-09-12T11:32:34.1507881Z   buildx: Docker Buildx (Docker Inc.)
+2024-09-12T11:32:34.1508329Z     Version:  v0.16.2
+2024-09-12T11:32:34.1508945Z     Path:     /usr/libexec/docker/cli-plugins/docker-buildx
+2024-09-12T11:32:34.1509993Z   compose: Docker Compose (Docker Inc.)
+2024-09-12T11:32:34.1510406Z     Version:  v2.27.1
+2024-09-12T11:32:34.1510970Z     Path:     /usr/libexec/docker/cli-plugins/docker-compose
+2024-09-12T11:32:34.1511436Z 
+2024-09-12T11:32:34.1511584Z Server:
+2024-09-12T11:32:34.1511933Z  Containers: 0
+2024-09-12T11:32:34.1512347Z   Running: 0
+2024-09-12T11:32:34.1512677Z   Paused: 0
+2024-09-12T11:32:34.1513000Z   Stopped: 0
+2024-09-12T11:32:34.1513386Z  Images: 15
+2024-09-12T11:32:34.1513714Z  Server Version: 26.1.3
+2024-09-12T11:32:34.1514106Z  Storage Driver: overlay2
+2024-09-12T11:32:34.1514585Z   Backing Filesystem: extfs
+2024-09-12T11:32:34.1515094Z   Supports d_type: true
+2024-09-12T11:32:34.1515673Z   Using metacopy: false
+2024-09-12T11:32:34.1516176Z   Native Overlay Diff: false
+2024-09-12T11:32:34.1516590Z   userxattr: false
+2024-09-12T11:32:34.1517008Z  Logging Driver: json-file
+2024-09-12T11:32:34.1517500Z  Cgroup Driver: cgroupfs
+2024-09-12T11:32:34.1517858Z  Cgroup Version: 2
+2024-09-12T11:32:34.1518198Z  Plugins:
+2024-09-12T11:32:34.1518602Z   Volume: local
+2024-09-12T11:32:34.1519039Z   Network: bridge host ipvlan macvlan null overlay
+2024-09-12T11:32:34.1519870Z   Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+2024-09-12T11:32:34.1520702Z  Swarm: inactive
+2024-09-12T11:32:34.1521217Z  Runtimes: io.containerd.runc.v2 runc
+2024-09-12T11:32:34.1522064Z  Default Runtime: runc
+2024-09-12T11:32:34.1522536Z  Init Binary: docker-init
+2024-09-12T11:32:34.1523053Z  containerd version: 472731909fa34bd7bc9c087e4c27943f9835f111
+2024-09-12T11:32:34.1523916Z  runc version: v1.1.13-0-g58aa920
+2024-09-12T11:32:34.1524331Z  init version: de40ad0
+2024-09-12T11:32:34.1524694Z  Security Options:
+2024-09-12T11:32:34.1525138Z   apparmor
+2024-09-12T11:32:34.1525450Z   seccomp
+2024-09-12T11:32:34.1526284Z    Profile: builtin
+2024-09-12T11:32:34.1526816Z   cgroupns
+2024-09-12T11:32:34.1527255Z  Kernel Version: 6.5.0-1025-azure
+2024-09-12T11:32:34.1527745Z  Operating System: Ubuntu 22.04.4 LTS
+2024-09-12T11:32:34.1528242Z  OSType: linux
+2024-09-12T11:32:34.1528626Z  Architecture: x86_64
+2024-09-12T11:32:34.1528953Z  CPUs: 4
+2024-09-12T11:32:34.1529352Z  Total Memory: 15.61GiB
+2024-09-12T11:32:34.1529773Z  Name: fv-az1771-26
+2024-09-12T11:32:34.1530295Z  ID: 30759ade-e034-4128-bb61-2ac11859f059
+2024-09-12T11:32:34.1530775Z  Docker Root Dir: /var/lib/docker
+2024-09-12T11:32:34.1531214Z  Debug Mode: false
+2024-09-12T11:32:34.1531596Z  Username: githubactions
+2024-09-12T11:32:34.1531982Z  Experimental: false
+2024-09-12T11:32:34.1532355Z  Insecure Registries:
+2024-09-12T11:32:34.1532790Z   127.0.0.0/8
+2024-09-12T11:32:34.1533146Z  Live Restore Enabled: false
+2024-09-12T11:32:34.1533380Z 
+2024-09-12T11:32:34.1534019Z ##[endgroup]
+2024-09-12T11:32:34.2054971Z ##[group]Buildx version
+2024-09-12T11:32:34.2080956Z [command]/usr/bin/docker buildx version
+2024-09-12T11:32:34.2713430Z github.com/docker/buildx v0.16.2 99dea6dacacc3d604788953088560b9880550570
+2024-09-12T11:32:34.2748445Z ##[endgroup]
+2024-09-12T11:32:34.2759347Z ##[group]Creating a new builder instance
+2024-09-12T11:32:34.3433570Z [command]/usr/bin/docker buildx create --name builder-f4cb56a1-d7bb-47cf-be5c-4077c574f70c --driver docker-container --buildkitd-flags --allow-insecure-entitlement security.insecure --allow-insecure-entitlement network.host --use
+2024-09-12T11:32:34.4029417Z builder-f4cb56a1-d7bb-47cf-be5c-4077c574f70c
+2024-09-12T11:32:34.4063651Z ##[endgroup]
+2024-09-12T11:32:34.4064334Z ##[group]Booting builder
+2024-09-12T11:32:34.4104080Z [command]/usr/bin/docker buildx inspect --bootstrap --builder builder-f4cb56a1-d7bb-47cf-be5c-4077c574f70c
+2024-09-12T11:32:34.4589578Z #1 [internal] booting buildkit
+2024-09-12T11:32:34.6094058Z #1 pulling image moby/buildkit:buildx-stable-1
+2024-09-12T11:32:35.2198683Z #1 pulling image moby/buildkit:buildx-stable-1 0.8s done
+2024-09-12T11:32:35.3707241Z #1 creating container buildx_buildkit_builder-f4cb56a1-d7bb-47cf-be5c-4077c574f70c0
+2024-09-12T11:32:35.8126942Z #1 creating container buildx_buildkit_builder-f4cb56a1-d7bb-47cf-be5c-4077c574f70c0 0.6s done
+2024-09-12T11:32:35.8158155Z #1 DONE 1.4s
+2024-09-12T11:32:35.8474935Z Name:          builder-f4cb56a1-d7bb-47cf-be5c-4077c574f70c
+2024-09-12T11:32:35.8476270Z Driver:        docker-container
+2024-09-12T11:32:35.8477220Z Last Activity: 2024-09-12 11:32:34 +0000 UTC
+2024-09-12T11:32:35.8477764Z 
+2024-09-12T11:32:35.8478102Z Nodes:
+2024-09-12T11:32:35.8479145Z Name:                  builder-f4cb56a1-d7bb-47cf-be5c-4077c574f70c0
+2024-09-12T11:32:35.8480244Z Endpoint:              unix:///var/run/docker.sock
+2024-09-12T11:32:35.8481200Z Status:                running
+2024-09-12T11:32:35.8482767Z BuildKit daemon flags: --allow-insecure-entitlement security.insecure --allow-insecure-entitlement network.host
+2024-09-12T11:32:35.8484142Z BuildKit version:      v0.15.2
+2024-09-12T11:32:35.8485312Z Platforms:             linux/amd64, linux/amd64/v2, linux/amd64/v3, linux/386
+2024-09-12T11:32:35.8486437Z Labels:
+2024-09-12T11:32:35.8487216Z  org.mobyproject.buildkit.worker.executor:         oci
+2024-09-12T11:32:35.8488465Z  org.mobyproject.buildkit.worker.hostname:         e48fe6f92534
+2024-09-12T11:32:35.8489592Z  org.mobyproject.buildkit.worker.network:          host
+2024-09-12T11:32:35.8490885Z  org.mobyproject.buildkit.worker.oci.process-mode: sandbox
+2024-09-12T11:32:35.8492014Z  org.mobyproject.buildkit.worker.selinux.enabled:  false
+2024-09-12T11:32:35.8493569Z  org.mobyproject.buildkit.worker.snapshotter:      overlayfs
+2024-09-12T11:32:35.8494693Z GC Policy rule#0:
+2024-09-12T11:32:35.8495301Z  All:           false
+2024-09-12T11:32:35.8496185Z  Filters:       type==source.local,type==exec.cachemount,type==source.git.checkout
+2024-09-12T11:32:35.8497211Z  Keep Duration: 48h0m0s
+2024-09-12T11:32:35.8497827Z  Keep Bytes:    488.3MiB
+2024-09-12T11:32:35.8498397Z GC Policy rule#1:
+2024-09-12T11:32:35.8499069Z  All:           false
+2024-09-12T11:32:35.8499631Z  Keep Duration: 1440h0m0s
+2024-09-12T11:32:35.8500209Z  Keep Bytes:    7.451GiB
+2024-09-12T11:32:35.8500947Z GC Policy rule#2:
+2024-09-12T11:32:35.8501506Z  All:        false
+2024-09-12T11:32:35.8502042Z  Keep Bytes: 7.451GiB
+2024-09-12T11:32:35.8503246Z GC Policy rule#3:
+2024-09-12T11:32:35.8503829Z  All:        true
+2024-09-12T11:32:35.8504567Z  Keep Bytes: 7.451GiB
+2024-09-12T11:32:35.8531666Z ##[endgroup]
+2024-09-12T11:32:35.9486063Z ##[group]Inspect builder
+2024-09-12T11:32:35.9551221Z {
+2024-09-12T11:32:35.9552129Z   "nodes": [
+2024-09-12T11:32:35.9552602Z     {
+2024-09-12T11:32:35.9553464Z       "name": "builder-f4cb56a1-d7bb-47cf-be5c-4077c574f70c0",
+2024-09-12T11:32:35.9554357Z       "endpoint": "unix:///var/run/docker.sock",
+2024-09-12T11:32:35.9554940Z       "status": "running",
+2024-09-12T11:32:35.9555564Z       "platforms": "linux/amd64,linux/amd64/v2,linux/amd64/v3,linux/386",
+2024-09-12T11:32:35.9556347Z       "labels": {
+2024-09-12T11:32:35.9556932Z         "org.mobyproject.buildkit.worker.executor": "oci",
+2024-09-12T11:32:35.9557792Z         "org.mobyproject.buildkit.worker.hostname": "e48fe6f92534",
+2024-09-12T11:32:35.9558706Z         "org.mobyproject.buildkit.worker.network": "host",
+2024-09-12T11:32:35.9559644Z         "org.mobyproject.buildkit.worker.oci.process-mode": "sandbox",
+2024-09-12T11:32:35.9560745Z         "org.mobyproject.buildkit.worker.selinux.enabled": "false",
+2024-09-12T11:32:35.9561957Z         "org.mobyproject.buildkit.worker.snapshotter": "overlayfs"
+2024-09-12T11:32:35.9562531Z       },
+2024-09-12T11:32:35.9562937Z       "gcPolicy": [
+2024-09-12T11:32:35.9563275Z         {
+2024-09-12T11:32:35.9563569Z           "all": false,
+2024-09-12T11:32:35.9563994Z           "filter": [
+2024-09-12T11:32:35.9564459Z             "type==source.local",
+2024-09-12T11:32:35.9565060Z             "type==exec.cachemount",
+2024-09-12T11:32:35.9565617Z             "type==source.git.checkout"
+2024-09-12T11:32:35.9566509Z           ],
+2024-09-12T11:32:35.9566851Z           "keepDuration": "48h0m0s",
+2024-09-12T11:32:35.9567416Z           "keepBytes": "488.3MiB"
+2024-09-12T11:32:35.9568292Z         },
+2024-09-12T11:32:35.9568884Z         {
+2024-09-12T11:32:35.9569520Z           "all": false,
+2024-09-12T11:32:35.9570107Z           "keepDuration": "1440h0m0s",
+2024-09-12T11:32:35.9570734Z           "keepBytes": "7.451GiB"
+2024-09-12T11:32:35.9571250Z         },
+2024-09-12T11:32:35.9571561Z         {
+2024-09-12T11:32:35.9572057Z           "all": false,
+2024-09-12T11:32:35.9572496Z           "keepBytes": "7.451GiB"
+2024-09-12T11:32:35.9572906Z         },
+2024-09-12T11:32:35.9573366Z         {
+2024-09-12T11:32:35.9573763Z           "all": true,
+2024-09-12T11:32:35.9574153Z           "keepBytes": "7.451GiB"
+2024-09-12T11:32:35.9574650Z         }
+2024-09-12T11:32:35.9575045Z       ]
+2024-09-12T11:32:35.9575352Z     }
+2024-09-12T11:32:35.9575737Z   ],
+2024-09-12T11:32:35.9576406Z   "name": "builder-f4cb56a1-d7bb-47cf-be5c-4077c574f70c",
+2024-09-12T11:32:35.9577021Z   "driver": "docker-container",
+2024-09-12T11:32:35.9577710Z   "lastActivity": "2024-09-12T11:32:34.000Z"
+2024-09-12T11:32:35.9578192Z }
+2024-09-12T11:32:35.9579029Z ##[endgroup]
+2024-09-12T11:32:35.9579667Z ##[group]BuildKit version
+2024-09-12T11:32:36.3891582Z builder-f4cb56a1-d7bb-47cf-be5c-4077c574f70c0: moby/buildkit:buildx-stable-1 => buildkitd github.com/moby/buildkit v0.15.2 9e14164a1099d3e41b58fc879cbdd6f2b2edb04e
+2024-09-12T11:32:36.3893118Z ##[endgroup]
+2024-09-12T11:32:36.4029905Z ##[group]Run aws-actions/amazon-ecr-login@v1
+2024-09-12T11:32:36.4030472Z with:
+2024-09-12T11:32:36.4030822Z   mask-password: false
+2024-09-12T11:32:36.4031209Z   registry-type: private
+2024-09-12T11:32:36.4031650Z   skip-logout: false
+2024-09-12T11:32:36.4032011Z env:
+2024-09-12T11:32:36.4032479Z   AWS_ACCESS_KEY_ID: ***
+2024-09-12T11:32:36.4033089Z   AWS_SECRET_ACCESS_KEY: ***
+2024-09-12T11:32:36.4033497Z   AWS_REGION: us-east-1
+2024-09-12T11:32:36.4033911Z ##[endgroup]
+2024-09-12T11:32:36.5451270Z ##[warning]Your docker password is not masked. See https://github.com/aws-actions/amazon-ecr-login#docker-credentials for more information.
+2024-09-12T11:32:36.9147270Z Logging into registry 734185875006.dkr.ecr.us-east-1.amazonaws.com
+2024-09-12T11:32:37.5606799Z ##[group]Run cd starter/frontend
+2024-09-12T11:32:37.5607496Z [36;1mcd starter/frontend[0m
+2024-09-12T11:32:37.5608287Z [36;1mdocker build --build-arg REACT_APP_MOVIE_API_URL=$BACKEND_ENDPOINT -t "$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" .[0m
+2024-09-12T11:32:37.5609156Z [36;1mecho "List Docker images"[0m
+2024-09-12T11:32:37.5609597Z [36;1mdocker images[0m
+2024-09-12T11:32:37.5610041Z [36;1mecho "ECR_REGISTRY= $ECR_REGISTRY"[0m
+2024-09-12T11:32:37.5610556Z [36;1mecho "ECR_REPOSITORY= $ECR_REPOSITORY"[0m
+2024-09-12T11:32:37.5611159Z [36;1mecho "IMAGE URI =$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"[0m
+2024-09-12T11:32:37.5611805Z [36;1mdocker push "$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"[0m
+2024-09-12T11:32:37.5612415Z [36;1mecho "Image pushed"[0m
+2024-09-12T11:32:37.5639659Z shell: /usr/bin/bash -e {0}
+2024-09-12T11:32:37.5640140Z env:
+2024-09-12T11:32:37.5640598Z   ECR_REGISTRY: 734185875006.dkr.ecr.us-east-1.amazonaws.com
+2024-09-12T11:32:37.5641360Z   ECR_REPOSITORY: mp-frontend
+2024-09-12T11:32:37.5641849Z   IMAGE_TAG: fc7999ee5efc49dc43b197e8307fc09f88b397fe
+2024-09-12T11:32:37.5642434Z   BACKEND_ENDPOINT: http://localhost:5000
+2024-09-12T11:32:37.5642850Z ##[endgroup]
+2024-09-12T11:32:37.8891213Z #0 building with "default" instance using docker driver
+2024-09-12T11:32:37.8891943Z 
+2024-09-12T11:32:37.8892410Z #1 [internal] load build definition from Dockerfile
+2024-09-12T11:32:37.8893672Z #1 transferring dockerfile: 462B done
+2024-09-12T11:32:37.8894409Z #1 DONE 0.0s
+2024-09-12T11:32:37.8894693Z 
+2024-09-12T11:32:37.8895853Z #2 [internal] load metadata for public.ecr.aws/docker/library/node:18.14.2-alpine3.17
+2024-09-12T11:32:38.5118373Z #2 DONE 0.8s
+2024-09-12T11:32:38.6318108Z 
+2024-09-12T11:32:38.6318864Z #3 [internal] load .dockerignore
+2024-09-12T11:32:38.6319695Z #3 transferring context: 2B done
+2024-09-12T11:32:38.6320469Z #3 DONE 0.0s
+2024-09-12T11:32:38.6321205Z 
+2024-09-12T11:32:38.6321603Z #4 [internal] load build context
+2024-09-12T11:32:38.6322400Z #4 transferring context: 708.32kB done
+2024-09-12T11:32:38.6323313Z #4 DONE 0.0s
+2024-09-12T11:32:38.6323672Z 
+2024-09-12T11:32:38.6325431Z #5 [1/6] FROM public.ecr.aws/docker/library/node:18.14.2-alpine3.17@sha256:f8a51c36b0be7434bbf867d4a08decf0100e656203d893b9b0f8b1fe9e40daea
+2024-09-12T11:32:38.6328935Z #5 resolve public.ecr.aws/docker/library/node:18.14.2-alpine3.17@sha256:f8a51c36b0be7434bbf867d4a08decf0100e656203d893b9b0f8b1fe9e40daea done
+2024-09-12T11:32:38.6331102Z #5 extracting sha256:63b65145d645c1250c391b2d16ebe53b3747c295ca8ba2fcb6b0cf064a4dc21c
+2024-09-12T11:32:38.6332741Z #5 sha256:478140d591162fa9113c5ba76c16afafe2aa04bccd8ec45c232ffeb4f31e9c23 0B / 2.35MB 0.1s
+2024-09-12T11:32:38.6334414Z #5 sha256:00ca3aba45c3a9811387d943d26291284ca6f938036760fcf85dbb2ab78e496a 0B / 450B 0.1s
+2024-09-12T11:32:38.6336295Z #5 sha256:f8a51c36b0be7434bbf867d4a08decf0100e656203d893b9b0f8b1fe9e40daea 1.43kB / 1.43kB done
+2024-09-12T11:32:38.6338178Z #5 sha256:fdbd2737cb94e25cae3db9fc5d7dc073c9675dad34239bfb3948c499a6908c19 1.16kB / 1.16kB done
+2024-09-12T11:32:38.6340187Z #5 sha256:9423415aa47ab401c3f202dd56fdf379f6161a620cc51caa048887d9bdddd246 6.44kB / 6.44kB done
+2024-09-12T11:32:38.6342111Z #5 sha256:63b65145d645c1250c391b2d16ebe53b3747c295ca8ba2fcb6b0cf064a4dc21c 3.37MB / 3.37MB 0.1s done
+2024-09-12T11:32:38.6343912Z #5 sha256:061765f30124ad9dd30397cf60c64741d3fb3b34c36f9566796687b1299183f5 0B / 47.51MB 0.1s
+2024-09-12T11:32:38.7321473Z #5 extracting sha256:63b65145d645c1250c391b2d16ebe53b3747c295ca8ba2fcb6b0cf064a4dc21c 0.1s done
+2024-09-12T11:32:38.7322734Z #5 sha256:478140d591162fa9113c5ba76c16afafe2aa04bccd8ec45c232ffeb4f31e9c23 2.35MB / 2.35MB 0.1s done
+2024-09-12T11:32:38.7324060Z #5 sha256:00ca3aba45c3a9811387d943d26291284ca6f938036760fcf85dbb2ab78e496a 450B / 450B 0.1s done
+2024-09-12T11:32:39.1326117Z #5 sha256:061765f30124ad9dd30397cf60c64741d3fb3b34c36f9566796687b1299183f5 4.19MB / 47.51MB 0.6s
+2024-09-12T11:32:39.6333224Z #5 sha256:061765f30124ad9dd30397cf60c64741d3fb3b34c36f9566796687b1299183f5 7.34MB / 47.51MB 1.1s
+2024-09-12T11:32:40.1324106Z #5 sha256:061765f30124ad9dd30397cf60c64741d3fb3b34c36f9566796687b1299183f5 14.68MB / 47.51MB 1.6s
+2024-09-12T11:32:40.3319504Z #5 sha256:061765f30124ad9dd30397cf60c64741d3fb3b34c36f9566796687b1299183f5 19.92MB / 47.51MB 1.8s
+2024-09-12T11:32:40.7325928Z #5 sha256:061765f30124ad9dd30397cf60c64741d3fb3b34c36f9566796687b1299183f5 25.17MB / 47.51MB 2.2s
+2024-09-12T11:32:40.8333353Z #5 sha256:061765f30124ad9dd30397cf60c64741d3fb3b34c36f9566796687b1299183f5 29.36MB / 47.51MB 2.3s
+2024-09-12T11:32:41.3320226Z #5 sha256:061765f30124ad9dd30397cf60c64741d3fb3b34c36f9566796687b1299183f5 35.65MB / 47.51MB 2.8s
+2024-09-12T11:32:41.6327679Z #5 sha256:061765f30124ad9dd30397cf60c64741d3fb3b34c36f9566796687b1299183f5 40.89MB / 47.51MB 3.1s
+2024-09-12T11:32:42.2321706Z #5 sha256:061765f30124ad9dd30397cf60c64741d3fb3b34c36f9566796687b1299183f5 46.14MB / 47.51MB 3.7s
+2024-09-12T11:32:42.8794673Z #5 sha256:061765f30124ad9dd30397cf60c64741d3fb3b34c36f9566796687b1299183f5 47.51MB / 47.51MB 4.2s done
+2024-09-12T11:32:42.8796775Z #5 extracting sha256:061765f30124ad9dd30397cf60c64741d3fb3b34c36f9566796687b1299183f5 0.1s
+2024-09-12T11:32:44.6082689Z #5 extracting sha256:061765f30124ad9dd30397cf60c64741d3fb3b34c36f9566796687b1299183f5 1.7s done
+2024-09-12T11:32:44.6084719Z #5 extracting sha256:478140d591162fa9113c5ba76c16afafe2aa04bccd8ec45c232ffeb4f31e9c23
+2024-09-12T11:32:44.8372539Z #5 extracting sha256:478140d591162fa9113c5ba76c16afafe2aa04bccd8ec45c232ffeb4f31e9c23 0.1s done
+2024-09-12T11:32:44.8737345Z #5 extracting sha256:00ca3aba45c3a9811387d943d26291284ca6f938036760fcf85dbb2ab78e496a
+2024-09-12T11:32:45.0747492Z #5 extracting sha256:00ca3aba45c3a9811387d943d26291284ca6f938036760fcf85dbb2ab78e496a done
+2024-09-12T11:32:45.0748951Z #5 DONE 6.4s
+2024-09-12T11:32:45.0749387Z 
+2024-09-12T11:32:45.0749690Z #6 [2/6] WORKDIR /app
+2024-09-12T11:32:45.0750294Z #6 DONE 0.0s
+2024-09-12T11:32:45.0751171Z 
+2024-09-12T11:32:45.0751516Z #7 [3/6] COPY package*.json ./
+2024-09-12T11:32:45.0752240Z #7 DONE 0.0s
+2024-09-12T11:32:45.0752584Z 
+2024-09-12T11:32:45.0752827Z #8 [4/6] RUN npm ci
+2024-09-12T11:32:50.5499302Z #8 5.626 npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
+2024-09-12T11:32:50.8133287Z #8 5.889 npm WARN deprecated stable@0.1.8: Modern JS already guarantees Array#sort() is a stable sort, so this library is deprecated. See the compatibility table on MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility
+2024-09-12T11:32:50.9325588Z #8 5.947 npm WARN deprecated rollup-plugin-terser@7.0.2: This package has been deprecated and is no longer maintained. Please use @rollup/plugin-terser
+2024-09-12T11:32:50.9328492Z #8 6.008 npm WARN deprecated sourcemap-codec@1.4.8: Please use @jridgewell/sourcemap-codec instead
+2024-09-12T11:32:54.1284291Z #8 9.204 npm WARN deprecated svgo@1.3.2: This SVGO version is no longer supported. Upgrade to v2.x.x.
+2024-09-12T11:33:03.6884557Z #8 18.76 
+2024-09-12T11:33:03.6885860Z #8 18.76 added 1506 packages, and audited 1507 packages in 18s
+2024-09-12T11:33:03.8690382Z #8 18.76 
+2024-09-12T11:33:03.8691018Z #8 18.76 263 packages are looking for funding
+2024-09-12T11:33:03.8692665Z #8 18.76   run `npm fund` for details
+2024-09-12T11:33:03.8693819Z #8 18.79 
+2024-09-12T11:33:03.8694453Z #8 18.79 28 vulnerabilities (10 moderate, 16 high, 2 critical)
+2024-09-12T11:33:03.8695750Z #8 18.79 
+2024-09-12T11:33:03.8696527Z #8 18.79 To address issues that do not require attention, run:
+2024-09-12T11:33:03.8697731Z #8 18.79   npm audit fix
+2024-09-12T11:33:03.8698143Z #8 18.79 
+2024-09-12T11:33:03.8699064Z #8 18.79 To address all issues (including breaking changes), run:
+2024-09-12T11:33:03.8700057Z #8 18.79   npm audit fix --force
+2024-09-12T11:33:03.8700477Z #8 18.79 
+2024-09-12T11:33:03.8700955Z #8 18.79 Run `npm audit` for details.
+2024-09-12T11:33:03.8701514Z #8 18.79 npm notice 
+2024-09-12T11:33:03.8702763Z #8 18.79 npm notice New major version of npm available! 9.5.0 -> 10.8.3
+2024-09-12T11:33:03.8705002Z #8 18.79 npm notice Changelog: <https://github.com/npm/cli/releases/tag/v10.8.3>
+2024-09-12T11:33:03.8706716Z #8 18.79 npm notice Run `npm install -g npm@10.8.3` to update!
+2024-09-12T11:33:03.8707401Z #8 18.79 npm notice 
+2024-09-12T11:33:04.8752017Z #8 DONE 20.0s
+2024-09-12T11:33:05.0538609Z 
+2024-09-12T11:33:05.0539533Z #9 [5/6] COPY . .
+2024-09-12T11:33:05.0540391Z #9 DONE 0.0s
+2024-09-12T11:33:05.0540702Z 
+2024-09-12T11:33:05.0540939Z #10 [6/6] RUN npm run build
+2024-09-12T11:33:05.5275522Z #10 0.624 
+2024-09-12T11:33:05.5276249Z #10 0.624 > frontend@1.0.0 build
+2024-09-12T11:33:05.5277229Z #10 0.624 > react-scripts build
+2024-09-12T11:33:05.5278007Z #10 0.624 
+2024-09-12T11:33:07.0517730Z #10 2.148 Creating an optimized production build...
+2024-09-12T11:33:07.2163262Z #10 2.312 Browserslist: caniuse-lite is outdated. Please run:
+2024-09-12T11:33:07.2164632Z #10 2.312   npx update-browserslist-db@latest
+2024-09-12T11:33:07.2166271Z #10 2.312   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+2024-09-12T11:33:13.3339629Z #10 8.430 Browserslist: caniuse-lite is outdated. Please run:
+2024-09-12T11:33:13.3340606Z #10 8.430   npx update-browserslist-db@latest
+2024-09-12T11:33:13.3341551Z #10 8.430   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+2024-09-12T11:33:13.9001244Z #10 8.996 Compiled successfully.
+2024-09-12T11:33:13.9001814Z #10 8.996 
+2024-09-12T11:33:13.9002409Z #10 8.996 File sizes after gzip:
+2024-09-12T11:33:13.9002870Z #10 8.996 
+2024-09-12T11:33:14.0648589Z #10 9.009   57.1 kB  build/static/js/main.c24e2229.js
+2024-09-12T11:33:14.0649773Z #10 9.009   556 B    build/static/css/main.86fcb180.css
+2024-09-12T11:33:14.0650635Z #10 9.009 
+2024-09-12T11:33:14.0651515Z #10 9.010 The project was built assuming it is hosted at /.
+2024-09-12T11:33:14.0652899Z #10 9.010 You can control this with the homepage field in your package.json.
+2024-09-12T11:33:14.0654558Z #10 9.010 
+2024-09-12T11:33:14.0655333Z #10 9.010 The build folder is ready to be deployed.
+2024-09-12T11:33:14.0656147Z #10 9.010 You may serve it with a static server:
+2024-09-12T11:33:14.0656743Z #10 9.010 
+2024-09-12T11:33:14.0657378Z #10 9.010   npm install -g serve
+2024-09-12T11:33:14.0657903Z #10 9.010   serve -s build
+2024-09-12T11:33:14.0658368Z #10 9.010 
+2024-09-12T11:33:14.0658779Z #10 9.011 Find out more about deployment here:
+2024-09-12T11:33:14.0659287Z #10 9.011 
+2024-09-12T11:33:14.0659773Z #10 9.011   https://cra.link/deployment
+2024-09-12T11:33:14.0660262Z #10 9.011 
+2024-09-12T11:33:14.2648606Z #10 DONE 9.4s
+2024-09-12T11:33:14.4177158Z 
+2024-09-12T11:33:14.4177901Z #11 exporting to image
+2024-09-12T11:33:14.4178922Z #11 exporting layers
+2024-09-12T11:33:20.3088153Z #11 exporting layers 6.0s done
+2024-09-12T11:33:20.3473425Z #11 writing image sha256:4294d186aae1b8743922a1eff8d2446e4dfbbf4493974eb6366c35857c15420f done
+2024-09-12T11:33:20.3476149Z #11 naming to 734185875006.dkr.ecr.us-east-1.amazonaws.com/mp-frontend:fc7999ee5efc49dc43b197e8307fc09f88b397fe done
+2024-09-12T11:33:20.3477838Z #11 DONE 6.1s
+2024-09-12T11:33:20.3516965Z List Docker images
+2024-09-12T11:33:20.3642864Z REPOSITORY                                                 TAG                                        IMAGE ID       CREATED         SIZE
+2024-09-12T11:33:20.3645412Z 734185875006.dkr.ecr.us-east-1.amazonaws.com/mp-frontend   fc7999ee5efc49dc43b197e8307fc09f88b397fe   4294d186aae1   6 seconds ago   529MB
+2024-09-12T11:33:20.3648172Z alpine                                                     3.17                                       2fb3b1200892   5 days ago      7.08MB
+2024-09-12T11:33:20.3649715Z alpine                                                     3.18                                       2c64cf60f6f0   5 days ago      7.35MB
+2024-09-12T11:33:20.3651146Z alpine                                                     3.19                                       a57d33a5c507   5 days ago      7.39MB
+2024-09-12T11:33:20.3653223Z debian                                                     11                                         34662f5448c4   7 days ago      124MB
+2024-09-12T11:33:20.3655096Z node                                                       20-alpine                                  45a59611ca84   3 weeks ago     133MB
+2024-09-12T11:33:20.3656671Z node                                                       20                                         dd223fd5024d   3 weeks ago     1.1GB
+2024-09-12T11:33:20.3658588Z moby/buildkit                                              buildx-stable-1                            0b1ee39de203   3 weeks ago     202MB
+2024-09-12T11:33:20.3660348Z moby/buildkit                                              latest                                     0b1ee39de203   3 weeks ago     202MB
+2024-09-12T11:33:20.3661849Z ubuntu                                                     22.04                                      53a843653cbc   4 weeks ago     77.9MB
+2024-09-12T11:33:20.3663435Z ubuntu                                                     20.04                                      9df6d6105df2   4 weeks ago     72.8MB
+2024-09-12T11:33:20.3664776Z node                                                       18                                         b92b80169bfd   2 months ago    1.09GB
+2024-09-12T11:33:20.3666198Z node                                                       18-alpine                                  f48cc5826852   2 months ago    128MB
+2024-09-12T11:33:20.3667728Z debian                                                     10                                         69530eaa9e7e   3 months ago    115MB
+2024-09-12T11:33:20.3668664Z alpine                                                     3.16                                       d49a5025be10   7 months ago    5.54MB
+2024-09-12T11:33:20.3669593Z node                                                       16                                         1ddc7e4055fd   12 months ago   909MB
+2024-09-12T11:33:20.3670816Z node                                                       16-alpine                                  2573171e0124   13 months ago   118MB
+2024-09-12T11:33:20.3672040Z ECR_REGISTRY= 734185875006.dkr.ecr.us-east-1.amazonaws.com
+2024-09-12T11:33:20.3673065Z ECR_REPOSITORY= mp-frontend
+2024-09-12T11:33:20.3674009Z IMAGE URI =734185875006.dkr.ecr.us-east-1.amazonaws.com/mp-frontend:fc7999ee5efc49dc43b197e8307fc09f88b397fe
+2024-09-12T11:33:20.3918923Z The push refers to repository [734185875006.dkr.ecr.us-east-1.amazonaws.com/mp-frontend]
+2024-09-12T11:33:20.6798061Z cbdba35aa081: Preparing
+2024-09-12T11:33:20.6799791Z 52ed40a75f3a: Preparing
+2024-09-12T11:33:20.6800805Z ac8b0c6c4b2a: Preparing
+2024-09-12T11:33:20.6802063Z acde0b1ad72b: Preparing
+2024-09-12T11:33:20.6803063Z 2c548960811c: Preparing
+2024-09-12T11:33:20.6803659Z dc923cea9549: Preparing
+2024-09-12T11:33:20.6804275Z d26cfa2c5d93: Preparing
+2024-09-12T11:33:20.6804840Z ec7aaa5c3b9b: Preparing
+2024-09-12T11:33:20.6805425Z 7cd52847ad77: Preparing
+2024-09-12T11:33:20.6806259Z dc923cea9549: Waiting
+2024-09-12T11:33:20.6806808Z d26cfa2c5d93: Waiting
+2024-09-12T11:33:20.6807246Z ec7aaa5c3b9b: Waiting
+2024-09-12T11:33:20.6807837Z 7cd52847ad77: Waiting
+2024-09-12T11:33:22.1948513Z 2c548960811c: Pushed
+2024-09-12T11:33:22.2216808Z 52ed40a75f3a: Pushed
+2024-09-12T11:33:22.5070988Z acde0b1ad72b: Pushed
+2024-09-12T11:33:22.5289702Z dc923cea9549: Layer already exists
+2024-09-12T11:33:22.5531171Z d26cfa2c5d93: Layer already exists
+2024-09-12T11:33:22.6081277Z cbdba35aa081: Pushed
+2024-09-12T11:33:22.8403818Z ec7aaa5c3b9b: Layer already exists
+2024-09-12T11:33:22.8763540Z 7cd52847ad77: Layer already exists
+2024-09-12T11:33:35.2592972Z ac8b0c6c4b2a: Pushed
+2024-09-12T11:33:37.5746718Z fc7999ee5efc49dc43b197e8307fc09f88b397fe: digest: sha256:6c538c8d681989e3d4f74a78bd0ca5a75ab3187fb1029dd4159427d9ccb14837 size: 2206
+2024-09-12T11:33:37.5770901Z Image pushed
+2024-09-12T11:33:37.5830791Z Post job cleanup.
+2024-09-12T11:33:37.6185233Z Logging out of registry 734185875006.dkr.ecr.us-east-1.amazonaws.com
+2024-09-12T11:33:37.6475131Z Post job cleanup.
+2024-09-12T11:33:37.7770322Z ##[group]Removing builder
+2024-09-12T11:33:37.9030424Z [command]/usr/bin/docker buildx rm builder-f4cb56a1-d7bb-47cf-be5c-4077c574f70c
+2024-09-12T11:33:38.0952943Z builder-f4cb56a1-d7bb-47cf-be5c-4077c574f70c removed
+2024-09-12T11:33:38.0987336Z ##[endgroup]
+2024-09-12T11:33:38.0988487Z ##[group]Cleaning up certificates
+2024-09-12T11:33:38.0995183Z ##[endgroup]
+2024-09-12T11:33:38.1107182Z Post job cleanup.
+2024-09-12T11:33:38.2656696Z Post job cleanup.
+2024-09-12T11:33:38.3365531Z [command]/usr/bin/git version
+2024-09-12T11:33:38.3408559Z git version 2.46.0
+2024-09-12T11:33:38.3452833Z Temporarily overriding HOME='/home/runner/work/_temp/7fabfdbd-ee46-4ab4-a442-0b4f1382d6db' before making global git config changes
+2024-09-12T11:33:38.3454960Z Adding repository directory to the temporary git global config as a safe directory
+2024-09-12T11:33:38.3457993Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cd12354-Movie-Picture-Pipeline/cd12354-Movie-Picture-Pipeline
+2024-09-12T11:33:38.3491729Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2024-09-12T11:33:38.3522504Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2024-09-12T11:33:38.3761891Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2024-09-12T11:33:38.3782424Z http.https://github.com/.extraheader
+2024-09-12T11:33:38.3794254Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2024-09-12T11:33:38.3826114Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2024-09-12T11:33:38.4285902Z Cleaning up orphan processes

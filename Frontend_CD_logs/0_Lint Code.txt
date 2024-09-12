@@ -1,0 +1,297 @@
+﻿2024-09-12T19:01:45.4710867Z Current runner version: '2.319.1'
+2024-09-12T19:01:45.4734138Z ##[group]Operating System
+2024-09-12T19:01:45.4734761Z Ubuntu
+2024-09-12T19:01:45.4735110Z 22.04.4
+2024-09-12T19:01:45.4735496Z LTS
+2024-09-12T19:01:45.4735830Z ##[endgroup]
+2024-09-12T19:01:45.4736218Z ##[group]Runner Image
+2024-09-12T19:01:45.4736681Z Image: ubuntu-22.04
+2024-09-12T19:01:45.4737073Z Version: 20240908.1.0
+2024-09-12T19:01:45.4738083Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20240908.1/images/ubuntu/Ubuntu2204-Readme.md
+2024-09-12T19:01:45.4739555Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20240908.1
+2024-09-12T19:01:45.4740425Z ##[endgroup]
+2024-09-12T19:01:45.4740835Z ##[group]Runner Image Provisioner
+2024-09-12T19:01:45.4741340Z 2.0.384.1
+2024-09-12T19:01:45.4741691Z ##[endgroup]
+2024-09-12T19:01:45.4756117Z ##[group]GITHUB_TOKEN Permissions
+2024-09-12T19:01:45.4757694Z Contents: read
+2024-09-12T19:01:45.4758225Z Metadata: read
+2024-09-12T19:01:45.4758786Z Packages: read
+2024-09-12T19:01:45.4759352Z ##[endgroup]
+2024-09-12T19:01:45.4762289Z Secret source: Actions
+2024-09-12T19:01:45.4762870Z Prepare workflow directory
+2024-09-12T19:01:45.5375799Z Prepare all required actions
+2024-09-12T19:01:45.5531601Z Getting action download info
+2024-09-12T19:01:45.7256034Z Download action repository 'actions/checkout@v3' (SHA:f43a0e5ff2bd294095638e18286ca9a3d1956744)
+2024-09-12T19:01:45.8627264Z Download action repository 'actions/setup-node@v3' (SHA:1a4442cacd436585916779262731d5b162bc6ec7)
+2024-09-12T19:01:45.9696225Z Download action repository 'actions/cache@v3' (SHA:e12d46a63a90f2fae62d114769bbf2a179198b5c)
+2024-09-12T19:01:46.1960113Z Complete job name: Lint Code
+2024-09-12T19:01:46.2870018Z ##[group]Run actions/checkout@v3
+2024-09-12T19:01:46.2870603Z with:
+2024-09-12T19:01:46.2871187Z   repository: Deepthi-Udacity/cd12354-Movie-Picture-Pipeline
+2024-09-12T19:01:46.2872481Z   token: ***
+2024-09-12T19:01:46.2872897Z   ssh-strict: true
+2024-09-12T19:01:46.2873356Z   persist-credentials: true
+2024-09-12T19:01:46.2873909Z   clean: true
+2024-09-12T19:01:46.2874382Z   sparse-checkout-cone-mode: true
+2024-09-12T19:01:46.2875055Z   fetch-depth: 1
+2024-09-12T19:01:46.2875503Z   fetch-tags: false
+2024-09-12T19:01:46.2875919Z   lfs: false
+2024-09-12T19:01:46.2876278Z   submodules: false
+2024-09-12T19:01:46.2876712Z   set-safe-directory: true
+2024-09-12T19:01:46.2877181Z ##[endgroup]
+2024-09-12T19:01:46.4949494Z Syncing repository: Deepthi-Udacity/cd12354-Movie-Picture-Pipeline
+2024-09-12T19:01:46.4953006Z ##[group]Getting Git version info
+2024-09-12T19:01:46.4954858Z Working directory is '/home/runner/work/cd12354-Movie-Picture-Pipeline/cd12354-Movie-Picture-Pipeline'
+2024-09-12T19:01:46.4957346Z [command]/usr/bin/git version
+2024-09-12T19:01:46.4958177Z git version 2.46.0
+2024-09-12T19:01:46.4960783Z ##[endgroup]
+2024-09-12T19:01:46.4977816Z Temporarily overriding HOME='/home/runner/work/_temp/17bb43df-16d2-46ed-b0d8-7a0c942ddb82' before making global git config changes
+2024-09-12T19:01:46.4980382Z Adding repository directory to the temporary git global config as a safe directory
+2024-09-12T19:01:46.4983416Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cd12354-Movie-Picture-Pipeline/cd12354-Movie-Picture-Pipeline
+2024-09-12T19:01:46.4989330Z Deleting the contents of '/home/runner/work/cd12354-Movie-Picture-Pipeline/cd12354-Movie-Picture-Pipeline'
+2024-09-12T19:01:46.4993492Z ##[group]Initializing the repository
+2024-09-12T19:01:46.4995527Z [command]/usr/bin/git init /home/runner/work/cd12354-Movie-Picture-Pipeline/cd12354-Movie-Picture-Pipeline
+2024-09-12T19:01:46.5080619Z hint: Using 'master' as the name for the initial branch. This default branch name
+2024-09-12T19:01:46.5083111Z hint: is subject to change. To configure the initial branch name to use in all
+2024-09-12T19:01:46.5084843Z hint: of your new repositories, which will suppress this warning, call:
+2024-09-12T19:01:46.5086207Z hint:
+2024-09-12T19:01:46.5087145Z hint: 	git config --global init.defaultBranch <name>
+2024-09-12T19:01:46.5088659Z hint:
+2024-09-12T19:01:46.5090081Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2024-09-12T19:01:46.5091936Z hint: 'development'. The just-created branch can be renamed via this command:
+2024-09-12T19:01:46.5093284Z hint:
+2024-09-12T19:01:46.5094979Z hint: 	git branch -m <name>
+2024-09-12T19:01:46.5097005Z Initialized empty Git repository in /home/runner/work/cd12354-Movie-Picture-Pipeline/cd12354-Movie-Picture-Pipeline/.git/
+2024-09-12T19:01:46.5101803Z [command]/usr/bin/git remote add origin https://github.com/Deepthi-Udacity/cd12354-Movie-Picture-Pipeline
+2024-09-12T19:01:46.5134045Z ##[endgroup]
+2024-09-12T19:01:46.5135916Z ##[group]Disabling automatic garbage collection
+2024-09-12T19:01:46.5137252Z [command]/usr/bin/git config --local gc.auto 0
+2024-09-12T19:01:46.5165990Z ##[endgroup]
+2024-09-12T19:01:46.5167329Z ##[group]Setting up auth
+2024-09-12T19:01:46.5170696Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2024-09-12T19:01:46.5200851Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2024-09-12T19:01:46.5554065Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2024-09-12T19:01:46.5582220Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2024-09-12T19:01:46.5822889Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2024-09-12T19:01:46.5855605Z ##[endgroup]
+2024-09-12T19:01:46.5856548Z ##[group]Fetching the repository
+2024-09-12T19:01:46.5863739Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +0c540d6750fc49394229e668397719e940be53c6:refs/remotes/origin/main
+2024-09-12T19:01:46.7729385Z remote: Enumerating objects: 68, done.        
+2024-09-12T19:01:46.7730778Z remote: Counting objects:   1% (1/68)        
+2024-09-12T19:01:46.7731595Z remote: Counting objects:   2% (2/68)        
+2024-09-12T19:01:46.7732406Z remote: Counting objects:   4% (3/68)        
+2024-09-12T19:01:46.7733100Z remote: Counting objects:   5% (4/68)        
+2024-09-12T19:01:46.7733737Z remote: Counting objects:   7% (5/68)        
+2024-09-12T19:01:46.7734478Z remote: Counting objects:   8% (6/68)        
+2024-09-12T19:01:46.7735164Z remote: Counting objects:  10% (7/68)        
+2024-09-12T19:01:46.7735823Z remote: Counting objects:  11% (8/68)        
+2024-09-12T19:01:46.7736571Z remote: Counting objects:  13% (9/68)        
+2024-09-12T19:01:46.7737270Z remote: Counting objects:  14% (10/68)        
+2024-09-12T19:01:46.7737924Z remote: Counting objects:  16% (11/68)        
+2024-09-12T19:01:46.7738682Z remote: Counting objects:  17% (12/68)        
+2024-09-12T19:01:46.7739397Z remote: Counting objects:  19% (13/68)        
+2024-09-12T19:01:46.7740045Z remote: Counting objects:  20% (14/68)        
+2024-09-12T19:01:46.7740804Z remote: Counting objects:  22% (15/68)        
+2024-09-12T19:01:46.7741495Z remote: Counting objects:  23% (16/68)        
+2024-09-12T19:01:46.7742131Z remote: Counting objects:  25% (17/68)        
+2024-09-12T19:01:46.7742903Z remote: Counting objects:  26% (18/68)        
+2024-09-12T19:01:46.7743520Z remote: Counting objects:  27% (19/68)        
+2024-09-12T19:01:46.7744093Z remote: Counting objects:  29% (20/68)        
+2024-09-12T19:01:46.7744798Z remote: Counting objects:  30% (21/68)        
+2024-09-12T19:01:46.7745410Z remote: Counting objects:  32% (22/68)        
+2024-09-12T19:01:46.7745971Z remote: Counting objects:  33% (23/68)        
+2024-09-12T19:01:46.7746655Z remote: Counting objects:  35% (24/68)        
+2024-09-12T19:01:46.7747253Z remote: Counting objects:  36% (25/68)        
+2024-09-12T19:01:46.7747810Z remote: Counting objects:  38% (26/68)        
+2024-09-12T19:01:46.7748786Z remote: Counting objects:  39% (27/68)        
+2024-09-12T19:01:46.7749420Z remote: Counting objects:  41% (28/68)        
+2024-09-12T19:01:46.7750044Z remote: Counting objects:  42% (29/68)        
+2024-09-12T19:01:46.7750673Z remote: Counting objects:  44% (30/68)        
+2024-09-12T19:01:46.7751271Z remote: Counting objects:  45% (31/68)        
+2024-09-12T19:01:46.7752161Z remote: Counting objects:  47% (32/68)        
+2024-09-12T19:01:46.7752894Z remote: Counting objects:  48% (33/68)        
+2024-09-12T19:01:46.7753505Z remote: Counting objects:  50% (34/68)        
+2024-09-12T19:01:46.7754130Z remote: Counting objects:  51% (35/68)        
+2024-09-12T19:01:46.7754764Z remote: Counting objects:  52% (36/68)        
+2024-09-12T19:01:46.7755359Z remote: Counting objects:  54% (37/68)        
+2024-09-12T19:01:46.7755974Z remote: Counting objects:  55% (38/68)        
+2024-09-12T19:01:46.7756619Z remote: Counting objects:  57% (39/68)        
+2024-09-12T19:01:46.7757259Z remote: Counting objects:  58% (40/68)        
+2024-09-12T19:01:46.7757868Z remote: Counting objects:  60% (41/68)        
+2024-09-12T19:01:46.7758502Z remote: Counting objects:  61% (42/68)        
+2024-09-12T19:01:46.7759115Z remote: Counting objects:  63% (43/68)        
+2024-09-12T19:01:46.7759717Z remote: Counting objects:  64% (44/68)        
+2024-09-12T19:01:46.7760352Z remote: Counting objects:  66% (45/68)        
+2024-09-12T19:01:46.7760967Z remote: Counting objects:  67% (46/68)        
+2024-09-12T19:01:46.7761559Z remote: Counting objects:  69% (47/68)        
+2024-09-12T19:01:46.7762181Z remote: Counting objects:  70% (48/68)        
+2024-09-12T19:01:46.7762987Z remote: Counting objects:  72% (49/68)        
+2024-09-12T19:01:46.7763612Z remote: Counting objects:  73% (50/68)        
+2024-09-12T19:01:46.7764263Z remote: Counting objects:  75% (51/68)        
+2024-09-12T19:01:46.7764854Z remote: Counting objects:  76% (52/68)        
+2024-09-12T19:01:46.7765440Z remote: Counting objects:  77% (53/68)        
+2024-09-12T19:01:46.7766110Z remote: Counting objects:  79% (54/68)        
+2024-09-12T19:01:46.7766660Z remote: Counting objects:  80% (55/68)        
+2024-09-12T19:01:46.7767246Z remote: Counting objects:  82% (56/68)        
+2024-09-12T19:01:46.7767913Z remote: Counting objects:  83% (57/68)        
+2024-09-12T19:01:46.7768464Z remote: Counting objects:  85% (58/68)        
+2024-09-12T19:01:46.7769044Z remote: Counting objects:  86% (59/68)        
+2024-09-12T19:01:46.7769705Z remote: Counting objects:  88% (60/68)        
+2024-09-12T19:01:46.7770262Z remote: Counting objects:  89% (61/68)        
+2024-09-12T19:01:46.7770906Z remote: Counting objects:  91% (62/68)        
+2024-09-12T19:01:46.7771570Z remote: Counting objects:  92% (63/68)        
+2024-09-12T19:01:46.7772124Z remote: Counting objects:  94% (64/68)        
+2024-09-12T19:01:46.7772833Z remote: Counting objects:  95% (65/68)        
+2024-09-12T19:01:46.7773508Z remote: Counting objects:  97% (66/68)        
+2024-09-12T19:01:46.7774110Z remote: Counting objects:  98% (67/68)        
+2024-09-12T19:01:46.7774685Z remote: Counting objects: 100% (68/68)        
+2024-09-12T19:01:46.7775390Z remote: Counting objects: 100% (68/68), done.        
+2024-09-12T19:01:46.7776169Z remote: Compressing objects:   1% (1/61)        
+2024-09-12T19:01:46.7776782Z remote: Compressing objects:   3% (2/61)        
+2024-09-12T19:01:46.7777487Z remote: Compressing objects:   4% (3/61)        
+2024-09-12T19:01:46.7778142Z remote: Compressing objects:   6% (4/61)        
+2024-09-12T19:01:46.7778728Z remote: Compressing objects:   8% (5/61)        
+2024-09-12T19:01:46.7779427Z remote: Compressing objects:   9% (6/61)        
+2024-09-12T19:01:46.7780079Z remote: Compressing objects:  11% (7/61)        
+2024-09-12T19:01:46.7780670Z remote: Compressing objects:  13% (8/61)        
+2024-09-12T19:01:46.7781361Z remote: Compressing objects:  14% (9/61)        
+2024-09-12T19:01:46.7782004Z remote: Compressing objects:  16% (10/61)        
+2024-09-12T19:01:46.7783240Z remote: Compressing objects:  18% (11/61)        
+2024-09-12T19:01:46.7784990Z remote: Compressing objects:  19% (12/61)        
+2024-09-12T19:01:46.7786062Z remote: Compressing objects:  21% (13/61)        
+2024-09-12T19:01:46.7787193Z remote: Compressing objects:  22% (14/61)        
+2024-09-12T19:01:46.7788264Z remote: Compressing objects:  24% (15/61)        
+2024-09-12T19:01:46.7789306Z remote: Compressing objects:  26% (16/61)        
+2024-09-12T19:01:46.7790443Z remote: Compressing objects:  27% (17/61)        
+2024-09-12T19:01:46.7791132Z remote: Compressing objects:  29% (18/61)        
+2024-09-12T19:01:46.7791793Z remote: Compressing objects:  31% (19/61)        
+2024-09-12T19:01:46.7792845Z remote: Compressing objects:  32% (20/61)        
+2024-09-12T19:01:46.7793593Z remote: Compressing objects:  34% (21/61)        
+2024-09-12T19:01:46.7794337Z remote: Compressing objects:  36% (22/61)        
+2024-09-12T19:01:46.7795108Z remote: Compressing objects:  37% (23/61)        
+2024-09-12T19:01:46.7795760Z remote: Compressing objects:  39% (24/61)        
+2024-09-12T19:01:46.7796353Z remote: Compressing objects:  40% (25/61)        
+2024-09-12T19:01:46.7797074Z remote: Compressing objects:  42% (26/61)        
+2024-09-12T19:01:46.7797707Z remote: Compressing objects:  44% (27/61)        
+2024-09-12T19:01:46.7798290Z remote: Compressing objects:  45% (28/61)        
+2024-09-12T19:01:46.7799001Z remote: Compressing objects:  47% (29/61)        
+2024-09-12T19:01:46.7799628Z remote: Compressing objects:  49% (30/61)        
+2024-09-12T19:01:46.7800214Z remote: Compressing objects:  50% (31/61)        
+2024-09-12T19:01:46.7800924Z remote: Compressing objects:  52% (32/61)        
+2024-09-12T19:01:46.7801740Z remote: Compressing objects:  54% (33/61)        
+2024-09-12T19:01:46.7802386Z remote: Compressing objects:  55% (34/61)        
+2024-09-12T19:01:46.7803107Z remote: Compressing objects:  57% (35/61)        
+2024-09-12T19:01:46.7803732Z remote: Compressing objects:  59% (36/61)        
+2024-09-12T19:01:46.7804345Z remote: Compressing objects:  60% (37/61)        
+2024-09-12T19:01:46.7805047Z remote: Compressing objects:  62% (38/61)        
+2024-09-12T19:01:46.7805670Z remote: Compressing objects:  63% (39/61)        
+2024-09-12T19:01:46.7806294Z remote: Compressing objects:  65% (40/61)        
+2024-09-12T19:01:46.7806991Z remote: Compressing objects:  67% (41/61)        
+2024-09-12T19:01:46.7807623Z remote: Compressing objects:  68% (42/61)        
+2024-09-12T19:01:46.7808264Z remote: Compressing objects:  70% (43/61)        
+2024-09-12T19:01:46.7808923Z remote: Compressing objects:  72% (44/61)        
+2024-09-12T19:01:46.7809571Z remote: Compressing objects:  73% (45/61)        
+2024-09-12T19:01:46.7810204Z remote: Compressing objects:  75% (46/61)        
+2024-09-12T19:01:46.7810859Z remote: Compressing objects:  77% (47/61)        
+2024-09-12T19:01:46.7811508Z remote: Compressing objects:  78% (48/61)        
+2024-09-12T19:01:46.7812143Z remote: Compressing objects:  80% (49/61)        
+2024-09-12T19:01:46.7812812Z remote: Compressing objects:  81% (50/61)        
+2024-09-12T19:01:46.7813454Z remote: Compressing objects:  83% (51/61)        
+2024-09-12T19:01:46.7814074Z remote: Compressing objects:  85% (52/61)        
+2024-09-12T19:01:46.7814726Z remote: Compressing objects:  86% (53/61)        
+2024-09-12T19:01:46.7815362Z remote: Compressing objects:  88% (54/61)        
+2024-09-12T19:01:46.7815982Z remote: Compressing objects:  90% (55/61)        
+2024-09-12T19:01:46.7816640Z remote: Compressing objects:  91% (56/61)        
+2024-09-12T19:01:46.7817283Z remote: Compressing objects:  93% (57/61)        
+2024-09-12T19:01:46.7817906Z remote: Compressing objects:  95% (58/61)        
+2024-09-12T19:01:46.7818561Z remote: Compressing objects:  96% (59/61)        
+2024-09-12T19:01:46.7819198Z remote: Compressing objects:  98% (60/61)        
+2024-09-12T19:01:46.7819833Z remote: Compressing objects: 100% (61/61)        
+2024-09-12T19:01:46.7820589Z remote: Compressing objects: 100% (61/61), done.        
+2024-09-12T19:01:46.7996820Z remote: Total 68 (delta 5), reused 56 (delta 2), pack-reused 0 (from 0)        
+2024-09-12T19:01:46.8173345Z From https://github.com/Deepthi-Udacity/cd12354-Movie-Picture-Pipeline
+2024-09-12T19:01:46.8174944Z  * [new ref]         0c540d6750fc49394229e668397719e940be53c6 -> origin/main
+2024-09-12T19:01:46.8198632Z ##[endgroup]
+2024-09-12T19:01:46.8199329Z ##[group]Determining the checkout info
+2024-09-12T19:01:46.8200773Z ##[endgroup]
+2024-09-12T19:01:46.8201547Z ##[group]Checking out the ref
+2024-09-12T19:01:46.8204935Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2024-09-12T19:01:46.8315667Z Switched to a new branch 'main'
+2024-09-12T19:01:46.8319666Z branch 'main' set up to track 'origin/main'.
+2024-09-12T19:01:46.8325731Z ##[endgroup]
+2024-09-12T19:01:46.8359876Z [command]/usr/bin/git log -1 --format='%H'
+2024-09-12T19:01:46.8382371Z '0c540d6750fc49394229e668397719e940be53c6'
+2024-09-12T19:01:46.8715368Z ##[group]Run actions/setup-node@v3
+2024-09-12T19:01:46.8715907Z with:
+2024-09-12T19:01:46.8716221Z   node-version: 18
+2024-09-12T19:01:46.8716708Z   always-auth: false
+2024-09-12T19:01:46.8717079Z   check-latest: false
+2024-09-12T19:01:46.8717583Z   token: ***
+2024-09-12T19:01:46.8718013Z ##[endgroup]
+2024-09-12T19:01:47.0664095Z Found in cache @ /opt/hostedtoolcache/node/18.20.4/x64
+2024-09-12T19:01:47.0670042Z ##[group]Environment details
+2024-09-12T19:01:47.4454654Z node: v18.20.4
+2024-09-12T19:01:47.4455415Z npm: 10.7.0
+2024-09-12T19:01:47.4455920Z yarn: 1.22.22
+2024-09-12T19:01:47.4457447Z ##[endgroup]
+2024-09-12T19:01:47.6429289Z ##[group]Run actions/cache@v3
+2024-09-12T19:01:47.6429769Z with:
+2024-09-12T19:01:47.6430201Z   path: ~/.npm
+2024-09-12T19:01:47.6430536Z   key: npm-cache-
+2024-09-12T19:01:47.6430976Z   enableCrossOsArchive: false
+2024-09-12T19:01:47.6431453Z   fail-on-cache-miss: false
+2024-09-12T19:01:47.6431801Z   lookup-only: false
+2024-09-12T19:01:47.6432458Z ##[endgroup]
+2024-09-12T19:01:48.2225415Z Cache Size: ~59 MB (61590686 B)
+2024-09-12T19:01:48.2249009Z [command]/usr/bin/tar -xf /home/runner/work/_temp/85f21f87-d07c-4c30-a32e-ddf0daa92bd1/cache.tzst -P -C /home/runner/work/cd12354-Movie-Picture-Pipeline/cd12354-Movie-Picture-Pipeline --use-compress-program unzstd
+2024-09-12T19:01:48.7016063Z Cache restored successfully
+2024-09-12T19:01:48.7291286Z Cache restored from key: npm-cache-
+2024-09-12T19:01:48.7457326Z ##[group]Run cd starter/frontend && npm ci
+2024-09-12T19:01:48.7457944Z [36;1mcd starter/frontend && npm ci[0m
+2024-09-12T19:01:48.7485310Z shell: /usr/bin/bash -e {0}
+2024-09-12T19:01:48.7485759Z ##[endgroup]
+2024-09-12T19:01:53.2686505Z npm warn deprecated stable@0.1.8: Modern JS already guarantees Array#sort() is a stable sort, so this library is deprecated. See the compatibility table on MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility
+2024-09-12T19:01:53.3756575Z npm warn deprecated rollup-plugin-terser@7.0.2: This package has been deprecated and is no longer maintained. Please use @rollup/plugin-terser
+2024-09-12T19:01:53.8039242Z npm warn deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
+2024-09-12T19:01:53.9024457Z npm warn deprecated sourcemap-codec@1.4.8: Please use @jridgewell/sourcemap-codec instead
+2024-09-12T19:01:56.0082804Z npm warn deprecated svgo@1.3.2: This SVGO version is no longer supported. Upgrade to v2.x.x.
+2024-09-12T19:02:01.3296751Z 
+2024-09-12T19:02:01.3298356Z added 1506 packages, and audited 1507 packages in 13s
+2024-09-12T19:02:01.3299175Z 
+2024-09-12T19:02:01.3299558Z 263 packages are looking for funding
+2024-09-12T19:02:01.3300358Z   run `npm fund` for details
+2024-09-12T19:02:01.3511116Z 
+2024-09-12T19:02:01.3511783Z 28 vulnerabilities (10 moderate, 16 high, 2 critical)
+2024-09-12T19:02:01.3512632Z 
+2024-09-12T19:02:01.3513138Z To address issues that do not require attention, run:
+2024-09-12T19:02:01.3513988Z   npm audit fix
+2024-09-12T19:02:01.3516843Z 
+2024-09-12T19:02:01.3517516Z To address all issues (including breaking changes), run:
+2024-09-12T19:02:01.3518745Z   npm audit fix --force
+2024-09-12T19:02:01.3519139Z 
+2024-09-12T19:02:01.3519437Z Run `npm audit` for details.
+2024-09-12T19:02:01.4052733Z ##[group]Run cd starter/frontend && npm run lint
+2024-09-12T19:02:01.4053331Z [36;1mcd starter/frontend && npm run lint[0m
+2024-09-12T19:02:01.4079374Z shell: /usr/bin/bash -e {0}
+2024-09-12T19:02:01.4079749Z ##[endgroup]
+2024-09-12T19:02:01.5323338Z 
+2024-09-12T19:02:01.5324223Z > frontend@1.0.0 lint
+2024-09-12T19:02:01.5324891Z > eslint .
+2024-09-12T19:02:01.5325376Z 
+2024-09-12T19:02:02.3326837Z Post job cleanup.
+2024-09-12T19:02:02.4341701Z Cache hit occurred on the primary key npm-cache-, not saving cache.
+2024-09-12T19:02:02.4486961Z Post job cleanup.
+2024-09-12T19:02:02.6050015Z Post job cleanup.
+2024-09-12T19:02:02.6761241Z [command]/usr/bin/git version
+2024-09-12T19:02:02.6796096Z git version 2.46.0
+2024-09-12T19:02:02.6840007Z Temporarily overriding HOME='/home/runner/work/_temp/73b765aa-c09c-4a60-ac23-7e1b89b17f15' before making global git config changes
+2024-09-12T19:02:02.6842160Z Adding repository directory to the temporary git global config as a safe directory
+2024-09-12T19:02:02.6844841Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cd12354-Movie-Picture-Pipeline/cd12354-Movie-Picture-Pipeline
+2024-09-12T19:02:02.6876883Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2024-09-12T19:02:02.6907635Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2024-09-12T19:02:02.7148170Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2024-09-12T19:02:02.7167937Z http.https://github.com/.extraheader
+2024-09-12T19:02:02.7178861Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2024-09-12T19:02:02.7208339Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2024-09-12T19:02:02.7654104Z Cleaning up orphan processes

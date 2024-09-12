@@ -1,0 +1,22 @@
+﻿2024-09-12T18:56:53.5544783Z ##[group]Run cd starter/backend && pipenv run test
+2024-09-12T18:56:53.5545430Z [36;1mcd starter/backend && pipenv run test[0m
+2024-09-12T18:56:53.5570755Z shell: /usr/bin/bash -e {0}
+2024-09-12T18:56:53.5571118Z env:
+2024-09-12T18:56:53.5571638Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.14/x64
+2024-09-12T18:56:53.5572845Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.14/x64/lib/pkgconfig
+2024-09-12T18:56:53.5573518Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.14/x64
+2024-09-12T18:56:53.5574195Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.14/x64
+2024-09-12T18:56:53.5574752Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.14/x64
+2024-09-12T18:56:53.5575362Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.14/x64/lib
+2024-09-12T18:56:53.5575934Z ##[endgroup]
+2024-09-12T18:56:54.1253712Z ============================= test session starts ==============================
+2024-09-12T18:56:54.1255573Z platform linux -- Python 3.10.14, pytest-7.2.1, pluggy-1.0.0 -- /home/runner/.local/share/virtualenvs/backend-QnnwuTyC/bin/python
+2024-09-12T18:56:54.1256969Z cachedir: .pytest_cache
+2024-09-12T18:56:54.1257877Z rootdir: /home/runner/work/cd12354-Movie-Picture-Pipeline/cd12354-Movie-Picture-Pipeline/starter/backend
+2024-09-12T18:56:54.2823454Z collecting ... collected 3 items
+2024-09-12T18:56:54.2824177Z 
+2024-09-12T18:56:54.2868249Z test_app.py::test_movies_endpoint_returns_200 PASSED                     [ 33%]
+2024-09-12T18:56:54.2882823Z test_app.py::test_movies_endpoint_returns_json PASSED                    [ 66%]
+2024-09-12T18:56:54.2906715Z test_app.py::test_movies_endpoint_returns_valid_data PASSED              [100%]
+2024-09-12T18:56:54.2907453Z 
+2024-09-12T18:56:54.3245335Z ============================== 3 passed in 0.17s ===============================

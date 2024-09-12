@@ -1,0 +1,24 @@
+﻿2024-09-12T19:01:44.1047116Z ##[group]Run cd starter/frontend && npm ci
+2024-09-12T19:01:44.1047758Z [36;1mcd starter/frontend && npm ci[0m
+2024-09-12T19:01:44.1075690Z shell: /usr/bin/bash -e {0}
+2024-09-12T19:01:44.1076133Z ##[endgroup]
+2024-09-12T19:01:48.7243639Z npm warn deprecated stable@0.1.8: Modern JS already guarantees Array#sort() is a stable sort, so this library is deprecated. See the compatibility table on MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility
+2024-09-12T19:01:48.8684488Z npm warn deprecated rollup-plugin-terser@7.0.2: This package has been deprecated and is no longer maintained. Please use @rollup/plugin-terser
+2024-09-12T19:01:49.3572859Z npm warn deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
+2024-09-12T19:01:49.4529851Z npm warn deprecated sourcemap-codec@1.4.8: Please use @jridgewell/sourcemap-codec instead
+2024-09-12T19:01:51.8827302Z npm warn deprecated svgo@1.3.2: This SVGO version is no longer supported. Upgrade to v2.x.x.
+2024-09-12T19:01:56.8025517Z 
+2024-09-12T19:01:56.8028074Z added 1506 packages, and audited 1507 packages in 13s
+2024-09-12T19:01:56.8028921Z 
+2024-09-12T19:01:56.8029831Z 263 packages are looking for funding
+2024-09-12T19:01:56.8031006Z   run `npm fund` for details
+2024-09-12T19:01:56.8273562Z 
+2024-09-12T19:01:56.8274867Z 28 vulnerabilities (10 moderate, 16 high, 2 critical)
+2024-09-12T19:01:56.8275646Z 
+2024-09-12T19:01:56.8276449Z To address issues that do not require attention, run:
+2024-09-12T19:01:56.8277755Z   npm audit fix
+2024-09-12T19:01:56.8278002Z 
+2024-09-12T19:01:56.8278357Z To address all issues (including breaking changes), run:
+2024-09-12T19:01:56.8279164Z   npm audit fix --force
+2024-09-12T19:01:56.8279422Z 
+2024-09-12T19:01:56.8279610Z Run `npm audit` for details.

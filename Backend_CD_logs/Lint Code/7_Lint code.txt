@@ -1,0 +1,11 @@
+﻿2024-09-12T18:56:56.9626150Z ##[group]Run cd starter/backend && pipenv run lint
+2024-09-12T18:56:56.9626767Z [36;1mcd starter/backend && pipenv run lint[0m
+2024-09-12T18:56:56.9652562Z shell: /usr/bin/bash -e {0}
+2024-09-12T18:56:56.9653162Z env:
+2024-09-12T18:56:56.9653592Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.14/x64
+2024-09-12T18:56:56.9654361Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.14/x64/lib/pkgconfig
+2024-09-12T18:56:56.9655006Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.14/x64
+2024-09-12T18:56:56.9655672Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.14/x64
+2024-09-12T18:56:56.9656289Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.14/x64
+2024-09-12T18:56:56.9656878Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.14/x64/lib
+2024-09-12T18:56:56.9657473Z ##[endgroup]

@@ -1,0 +1,16 @@
+﻿2024-09-12T18:56:53.0717910Z ##[group]Run cd starter/backend && pipenv install
+2024-09-12T18:56:53.0718523Z [36;1mcd starter/backend && pipenv install[0m
+2024-09-12T18:56:53.0744740Z shell: /usr/bin/bash -e {0}
+2024-09-12T18:56:53.0745130Z env:
+2024-09-12T18:56:53.0745659Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.14/x64
+2024-09-12T18:56:53.0746329Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.14/x64/lib/pkgconfig
+2024-09-12T18:56:53.0747066Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.14/x64
+2024-09-12T18:56:53.0747647Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.14/x64
+2024-09-12T18:56:53.0748244Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.14/x64
+2024-09-12T18:56:53.0748856Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.14/x64/lib
+2024-09-12T18:56:53.0749542Z ##[endgroup]
+2024-09-12T18:56:53.4468506Z To activate this project's virtualenv, run pipenv shell.
+2024-09-12T18:56:53.4470802Z Alternatively, run a command inside the virtualenv with pipenv run.
+2024-09-12T18:56:53.4531834Z To activate this project's virtualenv, run pipenv shell.
+2024-09-12T18:56:53.4533565Z Alternatively, run a command inside the virtualenv with pipenv run.
+2024-09-12T18:56:53.4537834Z Installing dependencies from Pipfile.lock (f8f835)...

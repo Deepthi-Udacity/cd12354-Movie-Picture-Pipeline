@@ -1,0 +1,8 @@
+﻿2024-09-12T19:02:01.4052719Z ##[group]Run cd starter/frontend && npm run lint
+2024-09-12T19:02:01.4053327Z [36;1mcd starter/frontend && npm run lint[0m
+2024-09-12T19:02:01.4079363Z shell: /usr/bin/bash -e {0}
+2024-09-12T19:02:01.4079746Z ##[endgroup]
+2024-09-12T19:02:01.5323294Z 
+2024-09-12T19:02:01.5324214Z > frontend@1.0.0 lint
+2024-09-12T19:02:01.5324886Z > eslint .
+2024-09-12T19:02:01.5325370Z 

@@ -1,0 +1,16 @@
+﻿2024-09-12T19:01:56.8815547Z ##[group]Run cd starter/frontend && npm test
+2024-09-12T19:01:56.8816217Z [36;1mcd starter/frontend && npm test[0m
+2024-09-12T19:01:56.8841640Z shell: /usr/bin/bash -e {0}
+2024-09-12T19:01:56.8842173Z ##[endgroup]
+2024-09-12T19:01:57.0191492Z 
+2024-09-12T19:01:57.0192459Z > frontend@1.0.0 test
+2024-09-12T19:01:57.0193577Z > react-scripts test --transformIgnorePatterns
+2024-09-12T19:01:57.0194253Z 
+2024-09-12T19:02:07.0372638Z PASS src/components/__tests__/App.test.js (7.401 s)
+2024-09-12T19:02:07.0623419Z PASS src/components/__tests__/MovieList.test.js (7.447 s)
+2024-09-12T19:02:07.1735047Z 
+2024-09-12T19:02:07.1738830Z Test Suites: 2 passed, 2 total
+2024-09-12T19:02:07.1739810Z Tests:       3 passed, 3 total
+2024-09-12T19:02:07.1740478Z Snapshots:   0 total
+2024-09-12T19:02:07.1741000Z Time:        9.561 s
+2024-09-12T19:02:07.1741598Z Ran all test suites.

@@ -1,0 +1,41 @@
+﻿2024-09-12T18:57:09.1705158Z ##[group]Run pip install pipenv
+2024-09-12T18:57:09.1705853Z [36;1mpip install pipenv[0m
+2024-09-12T18:57:09.1735224Z shell: /usr/bin/bash -e {0}
+2024-09-12T18:57:09.1735656Z env:
+2024-09-12T18:57:09.1736040Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.14/x64
+2024-09-12T18:57:09.1736829Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.14/x64/lib/pkgconfig
+2024-09-12T18:57:09.1738041Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.14/x64
+2024-09-12T18:57:09.1738652Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.14/x64
+2024-09-12T18:57:09.1739326Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.14/x64
+2024-09-12T18:57:09.1739913Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.14/x64/lib
+2024-09-12T18:57:09.1740411Z ##[endgroup]
+2024-09-12T18:57:10.4764637Z Collecting pipenv
+2024-09-12T18:57:10.5100958Z   Downloading pipenv-2024.0.1-py3-none-any.whl.metadata (19 kB)
+2024-09-12T18:57:10.5403562Z Collecting certifi (from pipenv)
+2024-09-12T18:57:10.5503851Z   Downloading certifi-2024.8.30-py3-none-any.whl.metadata (2.2 kB)
+2024-09-12T18:57:10.7529196Z Collecting setuptools>=67 (from pipenv)
+2024-09-12T18:57:10.7624897Z   Downloading setuptools-74.1.2-py3-none-any.whl.metadata (6.7 kB)
+2024-09-12T18:57:10.8709983Z Collecting virtualenv>=20.24.2 (from pipenv)
+2024-09-12T18:57:10.8810452Z   Downloading virtualenv-20.26.4-py3-none-any.whl.metadata (4.5 kB)
+2024-09-12T18:57:10.9043356Z Collecting distlib<1,>=0.3.7 (from virtualenv>=20.24.2->pipenv)
+2024-09-12T18:57:10.9134962Z   Downloading distlib-0.3.8-py2.py3-none-any.whl.metadata (5.1 kB)
+2024-09-12T18:57:10.9465050Z Collecting filelock<4,>=3.12.2 (from virtualenv>=20.24.2->pipenv)
+2024-09-12T18:57:10.9556698Z   Downloading filelock-3.16.0-py3-none-any.whl.metadata (3.0 kB)
+2024-09-12T18:57:10.9891186Z Collecting platformdirs<5,>=3.9.1 (from virtualenv>=20.24.2->pipenv)
+2024-09-12T18:57:10.9992899Z   Downloading platformdirs-4.3.2-py3-none-any.whl.metadata (11 kB)
+2024-09-12T18:57:11.0154617Z Downloading pipenv-2024.0.1-py3-none-any.whl (3.2 MB)
+2024-09-12T18:57:11.0753532Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 71.7 MB/s eta 0:00:00
+2024-09-12T18:57:11.0846633Z Downloading setuptools-74.1.2-py3-none-any.whl (1.3 MB)
+2024-09-12T18:57:11.0965597Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 110.7 MB/s eta 0:00:00
+2024-09-12T18:57:11.1062293Z Downloading virtualenv-20.26.4-py3-none-any.whl (6.0 MB)
+2024-09-12T18:57:11.1418224Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.0/6.0 MB 175.8 MB/s eta 0:00:00
+2024-09-12T18:57:11.1508662Z Downloading certifi-2024.8.30-py3-none-any.whl (167 kB)
+2024-09-12T18:57:11.1660918Z Downloading distlib-0.3.8-py2.py3-none-any.whl (468 kB)
+2024-09-12T18:57:11.1807273Z Downloading filelock-3.16.0-py3-none-any.whl (16 kB)
+2024-09-12T18:57:11.1927623Z Downloading platformdirs-4.3.2-py3-none-any.whl (18 kB)
+2024-09-12T18:57:11.2653678Z Installing collected packages: distlib, setuptools, platformdirs, filelock, certifi, virtualenv, pipenv
+2024-09-12T18:57:11.3369800Z   Attempting uninstall: setuptools
+2024-09-12T18:57:11.3377362Z     Found existing installation: setuptools 65.5.0
+2024-09-12T18:57:11.3606858Z     Uninstalling setuptools-65.5.0:
+2024-09-12T18:57:11.3713103Z       Successfully uninstalled setuptools-65.5.0
+2024-09-12T18:57:13.7119542Z Successfully installed certifi-2024.8.30 distlib-0.3.8 filelock-3.16.0 pipenv-2024.0.1 platformdirs-4.3.2 setuptools-74.1.2 virtualenv-20.26.4

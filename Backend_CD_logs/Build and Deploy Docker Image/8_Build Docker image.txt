@@ -1,0 +1,177 @@
+﻿2024-09-12T18:57:34.5069784Z ##[group]Run cd starter/backend
+2024-09-12T18:57:34.5070382Z [36;1mcd starter/backend[0m
+2024-09-12T18:57:34.5070909Z [36;1mdocker build -t "$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" .[0m
+2024-09-12T18:57:34.5071600Z [36;1mdocker push "$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"[0m
+2024-09-12T18:57:34.5072357Z [36;1mecho "image_uri=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"[0m
+2024-09-12T18:57:34.5072902Z [36;1mecho "Image pushed"[0m
+2024-09-12T18:57:34.5097991Z shell: /usr/bin/bash -e {0}
+2024-09-12T18:57:34.5098398Z env:
+2024-09-12T18:57:34.5098923Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.14/x64
+2024-09-12T18:57:34.5099600Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.14/x64/lib/pkgconfig
+2024-09-12T18:57:34.5100318Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.14/x64
+2024-09-12T18:57:34.5100994Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.14/x64
+2024-09-12T18:57:34.5101546Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.14/x64
+2024-09-12T18:57:34.5102208Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.14/x64/lib
+2024-09-12T18:57:34.5102941Z   ECR_REGISTRY: 734185875006.dkr.ecr.us-east-1.amazonaws.com
+2024-09-12T18:57:34.5103514Z   ECR_REPOSITORY: backend
+2024-09-12T18:57:34.5103907Z   IMAGE_TAG: latest
+2024-09-12T18:57:34.5104244Z ##[endgroup]
+2024-09-12T18:57:34.8239451Z #0 building with "default" instance using docker driver
+2024-09-12T18:57:34.8242664Z 
+2024-09-12T18:57:34.8243498Z #1 [internal] load build definition from Dockerfile
+2024-09-12T18:57:34.8244444Z #1 transferring dockerfile: 539B done
+2024-09-12T18:57:34.8245381Z #1 DONE 0.0s
+2024-09-12T18:57:34.8245688Z 
+2024-09-12T18:57:34.8246637Z #2 [internal] load metadata for public.ecr.aws/docker/library/python:3.10-alpine
+2024-09-12T18:57:35.1414013Z #2 DONE 0.5s
+2024-09-12T18:57:35.2541786Z 
+2024-09-12T18:57:35.2544613Z #3 [internal] load .dockerignore
+2024-09-12T18:57:35.2545449Z #3 transferring context: 2B done
+2024-09-12T18:57:35.2546192Z #3 DONE 0.0s
+2024-09-12T18:57:35.2546404Z 
+2024-09-12T18:57:35.2546691Z #4 [internal] load build context
+2024-09-12T18:57:35.2547228Z #4 transferring context: 25.51kB done
+2024-09-12T18:57:35.2547920Z #4 DONE 0.0s
+2024-09-12T18:57:35.2548318Z 
+2024-09-12T18:57:35.2549454Z #5 [1/8] FROM public.ecr.aws/docker/library/python:3.10-alpine@sha256:f4e79458b7744726eac5bf7cbe8f6ab8ec7c68c3e6d120ca53743b83dc2e9161
+2024-09-12T18:57:35.2551667Z #5 resolve public.ecr.aws/docker/library/python:3.10-alpine@sha256:f4e79458b7744726eac5bf7cbe8f6ab8ec7c68c3e6d120ca53743b83dc2e9161 done
+2024-09-12T18:57:35.2553847Z #5 extracting sha256:22af4b207a4e64cf737a448b26ed35825fb268f7ab20682e26fe7ac86d95c056
+2024-09-12T18:57:35.3633732Z #5 extracting sha256:22af4b207a4e64cf737a448b26ed35825fb268f7ab20682e26fe7ac86d95c056 0.1s done
+2024-09-12T18:57:35.3635739Z #5 sha256:22af4b207a4e64cf737a448b26ed35825fb268f7ab20682e26fe7ac86d95c056 455.11kB / 455.11kB 0.1s done
+2024-09-12T18:57:35.3637605Z #5 sha256:62f1bb0422469b3fdf2d5a2e8592fe66eedb653cdfa6513b30caf7a5ebcdd4ed 12.22MB / 12.22MB 0.2s done
+2024-09-12T18:57:35.3639122Z #5 sha256:1d27aeaa808acecf6fcf05f7bc36e1ef0e5ac1d94456a19dd4e924db2505d63d 231B / 231B 0.1s done
+2024-09-12T18:57:35.3640493Z #5 sha256:74e9275ed34bd293d7e7eac863d340960b13efa3890910efde42b2644610df2b 3.08MB / 3.08MB 0.2s done
+2024-09-12T18:57:35.3641821Z #5 sha256:f4e79458b7744726eac5bf7cbe8f6ab8ec7c68c3e6d120ca53743b83dc2e9161 10.30kB / 10.30kB done
+2024-09-12T18:57:35.3642949Z #5 sha256:213ae6d848fb2c78b099212344d0e07852abcfc58ec703a83ca5af7fad30a936 1.93kB / 1.93kB done
+2024-09-12T18:57:35.3644342Z #5 sha256:6a15a8abd578e49a4cc6852f3ed1c88a1e5f7d71adfe601e4ad424ea3ec0a03b 6.33kB / 6.33kB done
+2024-09-12T18:57:35.4717498Z #5 extracting sha256:62f1bb0422469b3fdf2d5a2e8592fe66eedb653cdfa6513b30caf7a5ebcdd4ed
+2024-09-12T18:57:35.9305306Z #5 extracting sha256:62f1bb0422469b3fdf2d5a2e8592fe66eedb653cdfa6513b30caf7a5ebcdd4ed 0.4s done
+2024-09-12T18:57:35.9307792Z #5 extracting sha256:1d27aeaa808acecf6fcf05f7bc36e1ef0e5ac1d94456a19dd4e924db2505d63d
+2024-09-12T18:57:36.0436362Z #5 extracting sha256:1d27aeaa808acecf6fcf05f7bc36e1ef0e5ac1d94456a19dd4e924db2505d63d done
+2024-09-12T18:57:36.0438580Z #5 extracting sha256:74e9275ed34bd293d7e7eac863d340960b13efa3890910efde42b2644610df2b 0.1s
+2024-09-12T18:57:36.3775675Z #5 extracting sha256:74e9275ed34bd293d7e7eac863d340960b13efa3890910efde42b2644610df2b 0.2s done
+2024-09-12T18:57:36.3776932Z #5 DONE 1.1s
+2024-09-12T18:57:36.3777136Z 
+2024-09-12T18:57:36.3778047Z #6 [2/8] RUN adduser -u 1000 -D app
+2024-09-12T18:57:36.4793380Z #6 DONE 0.3s
+2024-09-12T18:57:36.6310433Z 
+2024-09-12T18:57:36.6312576Z #7 [3/8] RUN apk update &&   apk add   pcre   pcre-dev   build-base   gcc   linux-headers   openssl   libffi-dev   && pip install pipenv
+2024-09-12T18:57:36.9076003Z #7 0.427 fetch https://dl-cdn.alpinelinux.org/alpine/v3.20/main/x86_64/APKINDEX.tar.gz
+2024-09-12T18:57:37.0442363Z #7 0.564 fetch https://dl-cdn.alpinelinux.org/alpine/v3.20/community/x86_64/APKINDEX.tar.gz
+2024-09-12T18:57:37.3408354Z #7 0.860 v3.20.3-38-g5b99a0b2f22 [https://dl-cdn.alpinelinux.org/alpine/v3.20/main]
+2024-09-12T18:57:37.3410038Z #7 0.860 v3.20.3-39-g6fa106a5a3f [https://dl-cdn.alpinelinux.org/alpine/v3.20/community]
+2024-09-12T18:57:37.3410745Z #7 0.860 OK: 24166 distinct packages available
+2024-09-12T18:57:37.6840989Z #7 1.203 (1/30) Installing libgcc (13.2.1_git20240309-r0)
+2024-09-12T18:57:37.8065215Z #7 1.258 (2/30) Installing jansson (2.14-r4)
+2024-09-12T18:57:37.8066000Z #7 1.265 (3/30) Installing libstdc++ (13.2.1_git20240309-r0)
+2024-09-12T18:57:37.9479322Z #7 1.326 (4/30) Installing zstd-libs (1.5.6-r0)
+2024-09-12T18:57:37.9480171Z #7 1.349 (5/30) Installing binutils (2.42-r0)
+2024-09-12T18:57:37.9480759Z #7 1.467 (6/30) Installing libmagic (5.45-r1)
+2024-09-12T18:57:38.0516351Z #7 1.511 (7/30) Installing file (5.45-r1)
+2024-09-12T18:57:38.0517477Z #7 1.518 (8/30) Installing libgomp (13.2.1_git20240309-r0)
+2024-09-12T18:57:38.0518575Z #7 1.530 (9/30) Installing libatomic (13.2.1_git20240309-r0)
+2024-09-12T18:57:38.0519633Z #7 1.536 (10/30) Installing gmp (6.3.0-r1)
+2024-09-12T18:57:38.0520476Z #7 1.547 (11/30) Installing isl26 (0.26-r1)
+2024-09-12T18:57:38.0521314Z #7 1.571 (12/30) Installing mpfr4 (4.2.1-r0)
+2024-09-12T18:57:38.2213618Z #7 1.583 (13/30) Installing mpc1 (1.3.1-r1)
+2024-09-12T18:57:38.2214353Z #7 1.590 (14/30) Installing gcc (13.2.1_git20240309-r0)
+2024-09-12T18:57:38.8340935Z #7 2.353 (15/30) Installing libstdc++-dev (13.2.1_git20240309-r0)
+2024-09-12T18:57:38.9924486Z #7 2.512 (16/30) Installing musl-dev (1.2.5-r0)
+2024-09-12T18:57:39.2142929Z #7 2.583 (17/30) Installing g++ (13.2.1_git20240309-r0)
+2024-09-12T18:57:39.2828136Z #7 2.802 (18/30) Installing make (4.4.1-r2)
+2024-09-12T18:57:39.4331844Z #7 2.810 (19/30) Installing fortify-headers (1.1-r3)
+2024-09-12T18:57:39.4332620Z #7 2.817 (20/30) Installing patch (2.7.6-r10)
+2024-09-12T18:57:39.4333519Z #7 2.825 (21/30) Installing build-base (0.5-r3)
+2024-09-12T18:57:39.4334243Z #7 2.831 (22/30) Installing linux-headers (6.6-r0)
+2024-09-12T18:57:39.4334819Z #7 2.953 (23/30) Installing pkgconf (2.2.0-r0)
+2024-09-12T18:57:39.6809245Z #7 2.960 (24/30) Installing libffi-dev (3.4.6-r0)
+2024-09-12T18:57:39.6810442Z #7 2.968 (25/30) Installing openssl (3.3.2-r0)
+2024-09-12T18:57:39.6811300Z #7 2.982 (26/30) Installing pcre (8.45-r3)
+2024-09-12T18:57:39.6815769Z #7 2.993 (27/30) Installing libpcre16 (8.45-r3)
+2024-09-12T18:57:39.6816383Z #7 3.007 (28/30) Installing libpcre32 (8.45-r3)
+2024-09-12T18:57:39.6817026Z #7 3.016 (29/30) Installing libpcrecpp (8.45-r3)
+2024-09-12T18:57:39.6817916Z #7 3.022 (30/30) Installing pcre-dev (8.45-r3)
+2024-09-12T18:57:39.6818466Z #7 3.041 Executing busybox-1.36.1-r29.trigger
+2024-09-12T18:57:39.6819000Z #7 3.049 OK: 243 MiB in 67 packages
+2024-09-12T18:57:41.3306238Z #7 4.850 Collecting pipenv
+2024-09-12T18:57:41.4342972Z #7 4.890   Downloading pipenv-2024.0.1-py3-none-any.whl (3.2 MB)
+2024-09-12T18:57:41.5852045Z #7 4.954      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 52.3 MB/s eta 0:00:00
+2024-09-12T18:57:41.5853112Z #7 4.999 Collecting certifi
+2024-09-12T18:57:41.5854243Z #7 5.009   Downloading certifi-2024.8.30-py3-none-any.whl (167 kB)
+2024-09-12T18:57:41.5855203Z #7 5.016      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 167.3/167.3 kB 43.2 MB/s eta 0:00:00
+2024-09-12T18:57:41.5855808Z #7 5.104 Collecting virtualenv>=20.24.2
+2024-09-12T18:57:41.8097414Z #7 5.117   Downloading virtualenv-20.26.4-py3-none-any.whl (6.0 MB)
+2024-09-12T18:57:41.8098681Z #7 5.179      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.0/6.0 MB 102.0 MB/s eta 0:00:00
+2024-09-12T18:57:41.8632009Z #7 5.383 Collecting setuptools>=67
+2024-09-12T18:57:41.9678493Z #7 5.393   Downloading setuptools-74.1.2-py3-none-any.whl (1.3 MB)
+2024-09-12T18:57:41.9680151Z #7 5.409      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 89.2 MB/s eta 0:00:00
+2024-09-12T18:57:41.9681239Z #7 5.460 Collecting platformdirs<5,>=3.9.1
+2024-09-12T18:57:41.9682487Z #7 5.469   Downloading platformdirs-4.3.2-py3-none-any.whl (18 kB)
+2024-09-12T18:57:41.9683103Z #7 5.487 Collecting distlib<1,>=0.3.7
+2024-09-12T18:57:42.1752177Z #7 5.496   Downloading distlib-0.3.8-py2.py3-none-any.whl (468 kB)
+2024-09-12T18:57:42.1753654Z #7 5.505      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 468.9/468.9 kB 77.2 MB/s eta 0:00:00
+2024-09-12T18:57:42.1754748Z #7 5.535 Collecting filelock<4,>=3.12.2
+2024-09-12T18:57:42.1755404Z #7 5.544   Downloading filelock-3.16.0-py3-none-any.whl (16 kB)
+2024-09-12T18:57:42.2341577Z #7 5.753 Installing collected packages: distlib, setuptools, platformdirs, filelock, certifi, virtualenv, pipenv
+2024-09-12T18:57:42.3786840Z #7 5.838   Attempting uninstall: setuptools
+2024-09-12T18:57:42.3787933Z #7 5.839     Found existing installation: setuptools 65.5.1
+2024-09-12T18:57:42.3789367Z #7 5.898     Uninstalling setuptools-65.5.1:
+2024-09-12T18:57:42.5411914Z #7 5.910       Successfully uninstalled setuptools-65.5.1
+2024-09-12T18:57:45.1337536Z #7 8.653 Successfully installed certifi-2024.8.30 distlib-0.3.8 filelock-3.16.0 pipenv-2024.0.1 platformdirs-4.3.2 setuptools-74.1.2 virtualenv-20.26.4
+2024-09-12T18:57:45.3702150Z #7 8.653 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+2024-09-12T18:57:45.3704046Z #7 8.739 
+2024-09-12T18:57:45.3704672Z #7 8.739 [notice] A new release of pip is available: 23.0.1 -> 24.2
+2024-09-12T18:57:45.3705487Z #7 8.739 [notice] To update, run: pip install --upgrade pip
+2024-09-12T18:57:45.7886969Z #7 DONE 9.3s
+2024-09-12T18:57:45.9397194Z 
+2024-09-12T18:57:45.9398448Z #8 [4/8] RUN mkdir -p /var/www/app && mkdir /app
+2024-09-12T18:57:45.9607785Z #8 DONE 0.2s
+2024-09-12T18:57:46.1255358Z 
+2024-09-12T18:57:46.1256155Z #9 [5/8] COPY Pipfile* /app
+2024-09-12T18:57:46.1256921Z #9 DONE 0.0s
+2024-09-12T18:57:46.1257520Z 
+2024-09-12T18:57:46.1258594Z #10 [6/8] RUN cd /app && pipenv install --system --deploy
+2024-09-12T18:57:46.6314669Z #10 0.656 Installing dependencies from Pipfile.lock (f8f835)...
+2024-09-12T18:58:01.2680627Z #10 DONE 15.3s
+2024-09-12T18:58:01.4817952Z 
+2024-09-12T18:58:01.4820345Z #11 [7/8] COPY . /app
+2024-09-12T18:58:01.4821122Z #11 DONE 0.1s
+2024-09-12T18:58:01.4821461Z 
+2024-09-12T18:58:01.4821783Z #12 exporting to image
+2024-09-12T18:58:01.4822550Z #12 exporting layers
+2024-09-12T18:58:02.8520247Z #12 exporting layers 1.5s done
+2024-09-12T18:58:02.8785720Z #12 writing image sha256:956576eae439959d200de25dec987437913ba7ab7e4ee21daeb08a845a832a1d done
+2024-09-12T18:58:02.8787638Z #12 naming to 734185875006.dkr.ecr.us-east-1.amazonaws.com/backend:latest done
+2024-09-12T18:58:02.8788861Z #12 DONE 1.5s
+2024-09-12T18:58:02.9092365Z The push refers to repository [734185875006.dkr.ecr.us-east-1.amazonaws.com/backend]
+2024-09-12T18:58:02.9551548Z ccf0d1156048: Preparing
+2024-09-12T18:58:02.9554958Z 92a04944dc21: Preparing
+2024-09-12T18:58:02.9556165Z 00bca1e94b44: Preparing
+2024-09-12T18:58:02.9556779Z 1fe3b5dcee92: Preparing
+2024-09-12T18:58:02.9557386Z fd5539ad92ec: Preparing
+2024-09-12T18:58:02.9557785Z d699268e0571: Preparing
+2024-09-12T18:58:02.9558565Z 20559c112956: Preparing
+2024-09-12T18:58:02.9558993Z 1a7526aa9777: Preparing
+2024-09-12T18:58:02.9559380Z 9a0bfca01775: Preparing
+2024-09-12T18:58:02.9559821Z df96c561f4c8: Preparing
+2024-09-12T18:58:02.9560276Z 63ca1fbb43ae: Preparing
+2024-09-12T18:58:02.9560631Z d699268e0571: Waiting
+2024-09-12T18:58:02.9560998Z 20559c112956: Waiting
+2024-09-12T18:58:02.9561406Z 1a7526aa9777: Waiting
+2024-09-12T18:58:02.9561712Z 9a0bfca01775: Waiting
+2024-09-12T18:58:02.9562068Z df96c561f4c8: Waiting
+2024-09-12T18:58:02.9562467Z 63ca1fbb43ae: Waiting
+2024-09-12T18:58:03.4696778Z ccf0d1156048: Pushed
+2024-09-12T18:58:03.5047321Z 00bca1e94b44: Pushed
+2024-09-12T18:58:03.5780772Z 20559c112956: Layer already exists
+2024-09-12T18:58:03.6286306Z 1fe3b5dcee92: Pushed
+2024-09-12T18:58:03.6462133Z 1a7526aa9777: Layer already exists
+2024-09-12T18:58:03.7290546Z df96c561f4c8: Layer already exists
+2024-09-12T18:58:03.7368688Z 9a0bfca01775: Layer already exists
+2024-09-12T18:58:03.7985549Z 63ca1fbb43ae: Layer already exists
+2024-09-12T18:58:03.9548448Z d699268e0571: Pushed
+2024-09-12T18:58:04.3703882Z 92a04944dc21: Pushed
+2024-09-12T18:58:14.4405643Z fd5539ad92ec: Pushed
+2024-09-12T18:58:15.3128045Z latest: digest: sha256:ae8ffb8a3d51ebf2c5a8696a2bd76594f50ec16c4134dd3996f864fbfa55c9ac size: 2622
+2024-09-12T18:58:15.3153052Z image_uri=734185875006.dkr.ecr.us-east-1.amazonaws.com/backend:latest
+2024-09-12T18:58:15.3153815Z Image pushed

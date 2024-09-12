@@ -1,0 +1,16 @@
+﻿2024-09-12T18:58:21.6264147Z ##[group]Run EXTERNAL_IP=$(kubectl get svc backend -o jsonpath='{.status.loadBalancer.ingress[0].hostname}')
+2024-09-12T18:58:21.6265341Z [36;1mEXTERNAL_IP=$(kubectl get svc backend -o jsonpath='{.status.loadBalancer.ingress[0].hostname}')[0m
+2024-09-12T18:58:21.6266110Z [36;1mecho "External IP: $EXTERNAL_IP"[0m
+2024-09-12T18:58:21.6290928Z shell: /usr/bin/bash -e {0}
+2024-09-12T18:58:21.6291313Z env:
+2024-09-12T18:58:21.6291827Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.14/x64
+2024-09-12T18:58:21.6292494Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.14/x64/lib/pkgconfig
+2024-09-12T18:58:21.6293152Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.14/x64
+2024-09-12T18:58:21.6293809Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.14/x64
+2024-09-12T18:58:21.6294349Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.14/x64
+2024-09-12T18:58:21.6294967Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.14/x64/lib
+2024-09-12T18:58:21.6295705Z   AWS_ACCESS_KEY_ID: ***
+2024-09-12T18:58:21.6296476Z   AWS_SECRET_ACCESS_KEY: ***
+2024-09-12T18:58:21.6296965Z   AWS_REGION: us-east-1
+2024-09-12T18:58:21.6297658Z ##[endgroup]
+2024-09-12T18:58:22.3103533Z External IP: a0fb3821c9b4b40978dcd049ee119c84-705708349.us-east-1.elb.amazonaws.com

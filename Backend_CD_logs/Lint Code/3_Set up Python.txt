@@ -1,0 +1,11 @@
+﻿2024-09-12T18:56:48.0611003Z ##[group]Run actions/setup-python@v4
+2024-09-12T18:56:48.0611687Z with:
+2024-09-12T18:56:48.0612212Z   python-version: 3.10
+2024-09-12T18:56:48.0612703Z   check-latest: false
+2024-09-12T18:56:48.0613368Z   token: ***
+2024-09-12T18:56:48.0613896Z   update-environment: true
+2024-09-12T18:56:48.0614409Z   allow-prereleases: false
+2024-09-12T18:56:48.0614869Z ##[endgroup]
+2024-09-12T18:56:48.1908172Z ##[group]Installed versions
+2024-09-12T18:56:48.1969405Z Successfully set up CPython (3.10.14)
+2024-09-12T18:56:48.1970944Z ##[endgroup]

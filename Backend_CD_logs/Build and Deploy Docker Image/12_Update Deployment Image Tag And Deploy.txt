@@ -1,0 +1,31 @@
+﻿2024-09-12T18:58:17.5252468Z ##[group]Run kustomize edit set image backend=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+2024-09-12T18:58:17.5253802Z [36;1mkustomize edit set image backend=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG[0m
+2024-09-12T18:58:17.5254592Z [36;1mkustomize build | kubectl apply -f -[0m
+2024-09-12T18:58:17.5255126Z [36;1mkubectl rollout restart deployment/backend[0m
+2024-09-12T18:58:17.5255636Z [36;1mecho "Completed deployment"[0m
+2024-09-12T18:58:17.5256104Z [36;1mkubectl get pods[0m
+2024-09-12T18:58:17.5256492Z [36;1mecho "Completed"[0m
+2024-09-12T18:58:17.5281113Z shell: /usr/bin/bash -e {0}
+2024-09-12T18:58:17.5281565Z env:
+2024-09-12T18:58:17.5282072Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.14/x64
+2024-09-12T18:58:17.5282744Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.14/x64/lib/pkgconfig
+2024-09-12T18:58:17.5283374Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.14/x64
+2024-09-12T18:58:17.5283984Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.14/x64
+2024-09-12T18:58:17.5284694Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.14/x64
+2024-09-12T18:58:17.5285344Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.14/x64/lib
+2024-09-12T18:58:17.5286034Z   AWS_ACCESS_KEY_ID: ***
+2024-09-12T18:58:17.5286569Z   AWS_SECRET_ACCESS_KEY: ***
+2024-09-12T18:58:17.5287051Z   AWS_REGION: us-east-1
+2024-09-12T18:58:17.5287511Z   ECR_REGISTRY: 734185875006.dkr.ecr.us-east-1.amazonaws.com
+2024-09-12T18:58:17.5288081Z   ECR_REPOSITORY: backend
+2024-09-12T18:58:17.5288461Z   IMAGE_TAG: latest
+2024-09-12T18:58:17.5288761Z ##[endgroup]
+2024-09-12T18:58:20.2249000Z service/backend unchanged
+2024-09-12T18:58:20.2616662Z deployment.apps/backend unchanged
+2024-09-12T18:58:20.9425070Z deployment.apps/backend restarted
+2024-09-12T18:58:20.9445020Z Completed deployment
+2024-09-12T18:58:21.6207526Z NAME                        READY   STATUS              RESTARTS   AGE
+2024-09-12T18:58:21.6209007Z backend-7779d9697b-5zkbk    0/1     ContainerCreating   0          1s
+2024-09-12T18:58:21.6210269Z backend-886cb677c-v64q8     1/1     Running             0          2m44s
+2024-09-12T18:58:21.6212223Z frontend-767b98cd8c-x8wh4   1/1     Running             0          2m41s
+2024-09-12T18:58:21.6226836Z Completed

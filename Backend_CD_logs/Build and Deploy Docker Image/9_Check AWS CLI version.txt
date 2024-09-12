@@ -1,0 +1,12 @@
+﻿2024-09-12T18:58:15.3188292Z ##[group]Run aws --version
+2024-09-12T18:58:15.3188827Z [36;1maws --version[0m
+2024-09-12T18:58:15.3213747Z shell: /usr/bin/bash -e {0}
+2024-09-12T18:58:15.3214149Z env:
+2024-09-12T18:58:15.3214576Z   pythonLocation: /opt/hostedtoolcache/Python/3.10.14/x64
+2024-09-12T18:58:15.3215302Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.14/x64/lib/pkgconfig
+2024-09-12T18:58:15.3215976Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.14/x64
+2024-09-12T18:58:15.3216516Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.14/x64
+2024-09-12T18:58:15.3217408Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.14/x64
+2024-09-12T18:58:15.3218118Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.14/x64/lib
+2024-09-12T18:58:15.3218620Z ##[endgroup]
+2024-09-12T18:58:15.9914546Z aws-cli/2.17.46 Python/3.11.9 Linux/6.5.0-1025-azure exe/x86_64.ubuntu.22

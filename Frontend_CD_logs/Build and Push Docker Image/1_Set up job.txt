@@ -1,0 +1,29 @@
+﻿2024-09-12T19:02:18.7763086Z Current runner version: '2.319.1'
+2024-09-12T19:02:18.7791508Z ##[group]Operating System
+2024-09-12T19:02:18.7792232Z Ubuntu
+2024-09-12T19:02:18.7792652Z 22.04.4
+2024-09-12T19:02:18.7792982Z LTS
+2024-09-12T19:02:18.7793331Z ##[endgroup]
+2024-09-12T19:02:18.7793803Z ##[group]Runner Image
+2024-09-12T19:02:18.7794219Z Image: ubuntu-22.04
+2024-09-12T19:02:18.7794645Z Version: 20240908.1.0
+2024-09-12T19:02:18.7795706Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20240908.1/images/ubuntu/Ubuntu2204-Readme.md
+2024-09-12T19:02:18.7797152Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20240908.1
+2024-09-12T19:02:18.7798078Z ##[endgroup]
+2024-09-12T19:02:18.7798450Z ##[group]Runner Image Provisioner
+2024-09-12T19:02:18.7798952Z 2.0.384.1
+2024-09-12T19:02:18.7799381Z ##[endgroup]
+2024-09-12T19:02:18.7815535Z ##[group]GITHUB_TOKEN Permissions
+2024-09-12T19:02:18.7817430Z Contents: read
+2024-09-12T19:02:18.7817829Z Metadata: read
+2024-09-12T19:02:18.7818346Z Packages: read
+2024-09-12T19:02:18.7819137Z ##[endgroup]
+2024-09-12T19:02:18.7821423Z Secret source: Actions
+2024-09-12T19:02:18.7822010Z Prepare workflow directory
+2024-09-12T19:02:18.8473301Z Prepare all required actions
+2024-09-12T19:02:18.8640026Z Getting action download info
+2024-09-12T19:02:19.1337442Z Download action repository 'actions/checkout@v3' (SHA:f43a0e5ff2bd294095638e18286ca9a3d1956744)
+2024-09-12T19:02:19.2652101Z Download action repository 'actions/setup-node@v3' (SHA:1a4442cacd436585916779262731d5b162bc6ec7)
+2024-09-12T19:02:19.4099360Z Download action repository 'docker/setup-buildx-action@v2' (SHA:885d1462b80bc1c1c7f0b00334ad271f09369c55)
+2024-09-12T19:02:19.9727458Z Download action repository 'aws-actions/amazon-ecr-login@v1' (SHA:2fc7aceee09e9e4a7105c0d060c656fad0b4f63d)
+2024-09-12T19:02:20.5763459Z Complete job name: Build and Push Docker Image
