@@ -101,7 +101,7 @@ jobs:
       - name: Build Docker image
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-          ECR_REPOSITORY: ${{ vars.ECR_BE_REPO_NAME }}
+          ECR_REPOSITORY: ${{ vars.AWS_ECR_BE_REPO_NAME }}
           IMAGE_TAG: latest
         run: |
           cd starter/backend
