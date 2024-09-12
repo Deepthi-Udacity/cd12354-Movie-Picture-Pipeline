@@ -66,6 +66,8 @@ jobs:
   build:
     name: Build and Push Docker Image
     needs: [ lint, test ]
+    environment:
+      name: dev
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
