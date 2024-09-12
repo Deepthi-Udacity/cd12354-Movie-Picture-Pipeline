@@ -109,13 +109,13 @@ jobs:
           echo "IMAGE URI =$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
           docker push "$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
           echo "Image pushed"
-  deploy:
-    name: Deploy docker image
-    needs: [ build ]
-    environment:
-      name: dev
-    runs-on: ubuntu-latest
-    steps:
+  # deploy:
+  #   name: Deploy docker image
+  #   needs: [ build ]
+  #   environment:
+  #     name: dev
+  #   runs-on: ubuntu-latest
+  #   steps:
       - name: Checkout code
         uses: actions/checkout@v3
         
@@ -137,10 +137,10 @@ jobs:
           IMAGE_TAG: ${{ github.sha }}
         run: |
           cd starter/backend/k8s
-          echo ${{ env.ECR_REGISTRY }}
-          echo ${{ env.ECR_REPOSITORY }}
-          echo ${{ env.IMAGE_TAG }}
-          kustomize edit set image backend=${{ env.ECR_REGISTRY }}/${{ env.ECR_REPOSITORY }}:${{ env.IMAGE_TAG }}
+          echo ${{ ECR_REGISTRY }}
+          echo ${{ ECR_REPOSITORY }}
+          echo ${{ IMAGE_TAG }}
+          kustomize edit set image backend=${{ ECR_REGISTRY }}/${{ ECR_REPOSITORY }}:${{ IMAGE_TAG }}
 
       - name: Apply Kubernetes resources
         run: |
