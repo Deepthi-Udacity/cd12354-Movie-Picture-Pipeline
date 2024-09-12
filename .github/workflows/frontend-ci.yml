@@ -93,4 +93,6 @@ jobs:
           docker build --build-arg REACT_APP_MOVIE_API_URL=$BACKEND_ENDPOINT -t "$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" .
           echo "List Docker images"
           docker images
+          echo "ECR_REGISTRY= $ECR_REGISTRY"
+          echo "ECR_REPOSITORY= $ECR_REPOSITORY"
           echo "full_image=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
