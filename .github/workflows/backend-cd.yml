@@ -109,19 +109,6 @@ jobs:
           docker push "$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
           echo "image_uri=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
           echo "Image pushed"
-        # env:
-        #   ECR_REGISTRY: ${{ vars.AWS_ECR_REGISTRY }}
-        #   ECR_REPOSITORY: ${{ vars.AWS_ECR_BE_REPO_NAME }}
-        #   IMAGE_TAG: ${{ github.sha }}
-        # run: |
-        #   cd starter/backend
-        #   docker build -t "$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" .
-        #   echo "List Docker images"
-        #   docker images
-        #   echo "ECR_REGISTRY= $ECR_REGISTRY"
-        #   echo "ECR_REPOSITORY= $ECR_REPOSITORY"
-        #   echo "IMAGE URI =$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
-        #   docker push "$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
         
       - name: Check AWS CLI version
         run: aws --version
