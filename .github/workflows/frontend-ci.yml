@@ -95,4 +95,6 @@ jobs:
           docker images
           echo "ECR_REGISTRY= $ECR_REGISTRY"
           echo "ECR_REPOSITORY= $ECR_REPOSITORY"
-          echo "full_image=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
+          echo "IMAGE URI =$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
+          docker push "$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
+          echo "Image pushed"
